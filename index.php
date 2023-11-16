@@ -27,7 +27,7 @@
     <!-- ---------------- HEADER ---------------- -->
     <header>
         <a href="index.php" class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <img src="./images/logo.png" alt="Logo">
         </a>
 
         <div class="nav__links">
@@ -64,7 +64,7 @@
                     <button onclick="scrollToSection('section2')" class="find-more">Find Out More</button>
                 </div>
             </div>
-            <div class="section1_right parallax-effect" data-depth="1">
+            <div class="section1_right">
                 <img class="hoodie_1" src="./images/hoodie_1.png" alt="">
             </div>
         </div>
@@ -76,15 +76,15 @@
                 <img class="hoodie_2 reveal" src="./images/hoodie_2.png" alt="">
             </div>
             <div class="section2_right reveal">
-                <h2>Something About Our Brand</h2>
-                <h3><br><br>
+                <h3>Who We Are</h3>
+                <h4><br>
                     Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
                     Each stitch is woven with passion, reflecting a blend of urban edge and timeless sophistication. 
                     Our hoodies aren't just garments; they're a statement of individuality and cozy expression. 
                     Designed for those who seek warmth without compromising on fashion, our collection brings together 
                     innovation, comfort, and the allure of distinctive designs. Wrap yourself in our hoodies and step 
                     into a world where comfort meets chic.
-                </h3>
+                </h4>
             </div>
         </div>
         <!-- ---------------- SECTION 3 ---------------- -->
