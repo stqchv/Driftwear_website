@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
-    <!-- ---------------- Conections ---------------- -->
-    <?php include('connect.php') ?>
+    
 
     <!-- ---------------- UPHEADER ---------------- -->
     <div class="upheader">
@@ -50,6 +49,7 @@
     <!-- ---------------- SECTIONS ---------------- -->
     <div class="section">
         <!-- ---------------- SECTION 1 ---------------- -->
+
         <div class="section1">
             <div class="bg_fade_blue"></div>
             <div class="bg_fade_pink"></div>
@@ -65,8 +65,10 @@
             <div class="section1_right parallax-effect" data-depth="1">
                 <img class="hoodie_1" src="./images/hoodie_1.png" alt="">
             </div>
-        
         </div>
+
+        <?php include('php/connect.php') ?>
+        
         <!-- ---------------- SECTION 2 ---------------- -->
         <div id="section2" class="section2">
             <div class="bg_fade_blue_2"></div>
