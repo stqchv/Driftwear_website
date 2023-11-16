@@ -105,13 +105,13 @@
 }
 
 .section2 img {
-    width: 700px;
+    width: 40vw;
     margin: 75px;
     /* border: 2px solid var(--border-color); */
 }
 
 .section2_right {
-    margin: 75px;
+    margin-left: 75px;
     z-index: 1;
     transition: all .5 ease;
     /* border: 2px solid var(--border-color); */
@@ -156,21 +156,6 @@
     opacity: 1;
     filter: blur(0);
 }
-
-
-
-
-
-.background_hoodie {
-    position: absolute;
-    top: 678px;
-    left: 500px;
-    width: 887px;
-    height: 887px;
-    opacity: 0.4;
-    filter: blur(97px);
-}
-
 
 .empty_space {
     height: 2000px;
