@@ -52,24 +52,21 @@ h2 {
 }
 
 h3 {
-    color: var(--second-color);
-    font-family: 'Inter';
-    font-size: 150px;
+    font-family: 'Poppins';
+    font-size: 4rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     line-height: normal;
     text-transform: capitalize;
 }
 
 h4 {
-    color: #fa1717;
-    text-align: center;
+    color: var(--text-color);
     font-family: 'Inter';
-    font-size: 22px;
+    font-size: 1.35rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
-    text-transform: capitalize;
 }
 
 /*------ Buttons ------*/

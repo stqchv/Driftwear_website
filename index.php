@@ -76,7 +76,7 @@
             <div class="section2_left">
                 <img class="hoodie_2 reveal" src="images/hoodie_2.png" alt="">
             </div>
-            <div class="section2_right reveal">
+            <div class="section2_right">
                 <h3>Who We Are</h3>
                 <h4><br>
                     Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
@@ -94,8 +94,7 @@
         </div>
 
         <div class="empty_space"></div>
-        <!-- ------------ SECTION BACKGROUND ------------- -->
-        <img class="background_hoodie parallax-effect" src="./images/hoodie_background.png" alt="" data-depth="">
+
     </div>
     <!-- ---------------- FOOTER ---------------- -->
 

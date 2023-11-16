@@ -105,7 +105,7 @@
 }
 
 .section2 img {
-    width: 750px;
+    width: 700px;
     margin: 75px;
     /* border: 2px solid var(--border-color); */
 }
@@ -118,13 +118,7 @@
 }
 
 .section2_right h3 {
-    color: var(--second-color);
-    font-family: 'Inter';
-    font-size: 3.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
+    color: var(--text-color);
 }
 
 .bg_fade_blue_2 {
@@ -151,7 +145,7 @@
 }
 
 .reveal {
-    transform: translateX(50px);
+    transform: translateX(-50px);
     opacity: 0;
     transition: all 2s ease;
     filter: blur(1px);
