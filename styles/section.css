@@ -124,18 +124,19 @@
 .bg_fade_blue_2 {
     position: absolute;
     top: 1800px;
-    right: 1200px;
+    right: 70vw;
     width: 887px;
     height: 887px;
     border-radius: 50%;
-    background: rgba(39, 136, 225, 0.30);
+    background: var(--second-color);
+    opacity: 0.5;
     filter: blur(97px);
 }
 
 .bg_fade_pink_2 {
     position: absolute;
-    top: 1400px;
-    left: 1498px;
+    top: 130vh;
+    left: 70vw;
     width: 667px;
     height: 667px;
     border-radius: 50%;

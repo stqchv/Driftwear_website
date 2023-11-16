@@ -62,3 +62,4 @@ window.addEventListener('scroll', (e) => {
         layer.style.transform = translate3d;
     });
 });
+
