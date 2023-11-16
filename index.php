@@ -26,12 +26,12 @@
     </div>
     <!-- ---------------- HEADER ---------------- -->
     <header>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="images/logo.png" alt="Logo">
         </a>
 
         <div class="nav__links">
-            <a href="#">Shop</a>
+            <a href="shop.php">Shop</a>
             <a href="#">Contact</a>
         </div>
 
@@ -53,12 +53,14 @@
         <div class="section1">
             <div class="bg_fade_blue"></div>
             <div class="bg_fade_pink"></div>
-            <div class="section1_left parallax-effect" data-depth="0.2">
+            <div class="section1_left">
                 <h2>Welcome to</h2>
                 <h1>DRIFT</h1>
                 <h1>WEAR</h1>
                 <div class="section1_buttons">
-                    <button class="shop-now">Shop Now</button>
+                    <a href="shop.php">
+                        <button class="shop-now">Shop Now</button>
+                    </a>
                     <button onclick="scrollToSection('section2')" class="find-more">Find Out More</button>
                 </div>
             </div>
@@ -66,8 +68,6 @@
                 <img class="hoodie_1" src="./images/hoodie_1.png" alt="">
             </div>
         </div>
-
-        <?php include('php/connect.php') ?>
         
         <!-- ---------------- SECTION 2 ---------------- -->
         <div id="section2" class="section2">
