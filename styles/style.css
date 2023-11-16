@@ -1,0 +1,77 @@
+/* -------- FONTS ----------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;500;700&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* --------  ----------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: rgb(9, 12, 16);
+    --bg-second-color: rgb(17, 17, 17);
+    --text-color: #f0f0f0;
+    --text-hover: rgb(133, 133, 133);
+    --main-color: rgb(198, 40, 119);
+    --second-color: rgb(39, 136, 225);
+    --white: rgb(252, 252, 252);
+    --border-color: rgba(20, 218, 175, 0.873);
+    --help-border: rgb(255, 0, 0);
+    --header-color: rgb(4, 5, 6);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 10em;
+    line-height: 0.8;
+    letter-spacing: -0.3rem;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 0.8;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-size: 1em;
+    font-weight: 100;
+}
+
+/*------ Buttons ------*/
+button {
+    border-radius: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
