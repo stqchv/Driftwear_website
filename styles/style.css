@@ -54,7 +54,7 @@ h2 {
 h3 {
     color: var(--second-color);
     font-family: 'Inter';
-    font-size: 2em;
+    font-size: 150px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -67,7 +67,7 @@ h4 {
     font-family: 'Inter';
     font-size: 22px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
 }

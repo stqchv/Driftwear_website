@@ -72,6 +72,7 @@
         <!-- ---------------- SECTION 2 ---------------- -->
         <div id="section2" class="section2">
             <div class="bg_fade_blue_2"></div>
+            <div class="bg_fade_pink_2"></div>
             <div class="section2_left">
                 <img class="hoodie_2 reveal" src="./images/hoodie_2.png" alt="">
             </div>
