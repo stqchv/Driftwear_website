@@ -69,8 +69,8 @@
 
 .bg_fade_blue {
     position: absolute;
-    top: 250px;
-    left: 1398px;
+    top: 40vh;
+    left: 70vw;
     width: 887px;
     height: 887px;
     border-radius: 50%;
@@ -81,8 +81,8 @@
 
 .bg_fade_pink {
     position: absolute;
-    top: -303px;
-    right: 1283px;
+    top: -55vh;
+    right: 70vw;
     width: 667px;
     height: 667px;
     border-radius: 50%;
@@ -111,7 +111,7 @@
 }
 
 .section2_right {
-    margin-left: 75px;
+    margin-right: 75px;
     z-index: 1;
     transition: all .5 ease;
     /* border: 2px solid var(--border-color); */
