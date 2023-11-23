@@ -29,10 +29,11 @@
     font-weight: 300;
 }
 
-.shop_box h8 {
+.shop_size {
     font-size: 1rem;
-    opacity: .5;
     font-weight: 200;
+    opacity: 0;
+    transition: all .2s ease;
 }
 
 .shop_image {
@@ -60,12 +61,15 @@
     transition: all .2s ease;
 }
 
-.shop_image:hover {
+.shop_box:hover {
     .img_front {
         opacity: 0;
     }
     .img_back {
         opacity: 1;
+    }
+    .shop_size {
+        opacity: .5;
     }
 }
 

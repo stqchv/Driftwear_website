@@ -63,7 +63,7 @@
                 echo "</div>";
                 echo "<h6>{$data['name']}</h6>";
                 echo "<h7>€{$data['price']}.00</h7><br>";
-                echo "<h8>S M L XL</h8>";
+                echo "<h8 class='shop_size'>S M L XL</h8>";
             echo "</div>";
         }
         ?>

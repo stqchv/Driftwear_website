@@ -72,7 +72,7 @@ h4 {
 /*------ Buttons ------*/
 button {
     color: var(--text-color);
-    border-radius: 26px;
+    /* border-radius: 26px; */
     cursor: pointer;
     padding: 16px;
     text-align: center;
