@@ -68,6 +68,8 @@
                 <img class="hoodie_1" src="./images/hoodie_1.png" alt="">
             </div>
         </div>
+
+        
         
         <!-- ---------------- SECTION 2 ---------------- -->
         <div id="section2" class="section2">

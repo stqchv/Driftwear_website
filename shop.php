@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/section.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/shop.css">
 </head>
 <body>
     
@@ -39,13 +40,60 @@
     <div class="underbar"></div>
 
 
-    <div class="empty_space"></div>
+
+    <!-- ---------------- SHOP CONTENT ---------------- -->
+
+    <div class="shop_content">
+        <div class="shop_box">
+            <div class="shop_image">
+                <img src="images/hoodie_1.png" alt="">
+            </div>
+            <h6>Basic Driftwear Hoodie</h6>
+            <h7>€150.00</h7><br>
+            <h8>S M L XL</h8>
+        </div>
+
+        <div class="shop_box">
+            <div class="shop_image">
+                <img src="images/hoodie_1.png" alt="">
+            </div>
+            <h6>Basic Driftwear Hoodie</h6>
+            <h7>€150.00</h7><br>
+            <h8>S M L XL</h8>
+        </div>
+        <div class="shop_box">
+            <div class="shop_image">
+                <img src="images/hoodie_1.png" alt="">
+            </div>
+            <h6>Basic Driftwear Hoodie</h6>
+            <h7>€150.00</h7><br>
+            <h8>S M L XL</h8>
+        </div>
+        <div class="shop_box">
+            <div class="shop_image">
+                <img src="images/hoodie_1.png" alt="">
+            </div>
+            <h6>Basic Driftwear Hoodie</h6>
+            <h7>€150.00</h7><br>
+            <h8>S M L XL</h8>
+        </div>
+        <div class="shop_box">
+            <div class="shop_image">
+                <img src="images/hoodie_1.png" alt="">
+            </div>
+            <h6>Basic Driftwear Hoodie</h6>
+            <h7>€150.00</h7><br>
+            <h8>S M L XL</h8>
+        </div>
+
+
+
+    </div>
 
 
     <?php include('php/connect.php') ?>
 
-
-
+    <div class="empty_space"></div>
 
     <footer>
         <div class="footer_content">
