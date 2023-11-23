@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="styles/footer.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>

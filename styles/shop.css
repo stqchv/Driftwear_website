@@ -5,15 +5,17 @@
     max-width: 1520px;
     margin: auto;
     margin-top: 70px;
+    margin-bottom: 100px;
     padding-top: 20px;
-    border: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    /* border: 2px solid var(--border-color); */
+    z-index: 1;
 }
 
 .shop_box {
-    width: 25%;
-    /* box-sizing: border-box; */
-    margin: 20px 10px 20px 10px;
-    border: 2px solid var(--border-color);
+    width: 24%;
+    margin: 20px 0 20px 0;
+    /* border: 2px solid var(--border-color); */
 }
 
 .shop_box h6 {
@@ -34,12 +36,37 @@
 }
 
 .shop_image {
+    position: relative;
     background-color: var(--header-color);
+    padding: 40px 20px 40px 20px;
     /* border: 2px solid var(--border-color); */
 }
 
 .shop_image img {
     max-width: 100%;
+}
+
+.img_front {
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+.img_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 40px 20px 40px 20px;
+    transition: all .2s ease;
+}
+
+.shop_image:hover {
+    .img_front {
+        opacity: 0;
+    }
+    .img_back {
+        opacity: 1;
+    }
 }
 
 

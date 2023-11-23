@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="styles/section.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/shop.css">
+
+    <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
     
@@ -43,57 +46,39 @@
 
     <!-- ---------------- SHOP CONTENT ---------------- -->
 
+    <?php
+    $mysqli = new mysqli('localhost','root','','driftwear_shop') or die($mysqli->connect_error);
+    $table = 'products';
+
+    $result = $mysqli->query("SELECT * FROM $table") or die($mysqli->error);
+    ?>
+
     <div class="shop_content">
-        <div class="shop_box">
+        <?php
+        while ($data = $result->fetch_assoc()){
+            echo "<div class='shop_box'>";
+                echo "<div class='shop_image'>";
+                    echo "<img src='{$data['image_front']}' class='img_front'>";
+                    echo "<img src='{$data['image_back']}' class='img_back'>";
+                echo "</div>";
+                echo "<h6>{$data['name']}</h6>";
+                echo "<h7>€{$data['price']}.00</h7><br>";
+                echo "<h8>S M L XL</h8>";
+            echo "</div>";
+        }
+        ?>
+        <!-- <div class="shop_box">
             <div class="shop_image">
                 <img src="images/hoodie_1.png" alt="">
             </div>
             <h6>Basic Driftwear Hoodie</h6>
             <h7>€150.00</h7><br>
             <h8>S M L XL</h8>
-        </div>
-
-        <div class="shop_box">
-            <div class="shop_image">
-                <img src="images/hoodie_1.png" alt="">
-            </div>
-            <h6>Basic Driftwear Hoodie</h6>
-            <h7>€150.00</h7><br>
-            <h8>S M L XL</h8>
-        </div>
-        <div class="shop_box">
-            <div class="shop_image">
-                <img src="images/hoodie_1.png" alt="">
-            </div>
-            <h6>Basic Driftwear Hoodie</h6>
-            <h7>€150.00</h7><br>
-            <h8>S M L XL</h8>
-        </div>
-        <div class="shop_box">
-            <div class="shop_image">
-                <img src="images/hoodie_1.png" alt="">
-            </div>
-            <h6>Basic Driftwear Hoodie</h6>
-            <h7>€150.00</h7><br>
-            <h8>S M L XL</h8>
-        </div>
-        <div class="shop_box">
-            <div class="shop_image">
-                <img src="images/hoodie_1.png" alt="">
-            </div>
-            <h6>Basic Driftwear Hoodie</h6>
-            <h7>€150.00</h7><br>
-            <h8>S M L XL</h8>
-        </div>
-
-
-
+        </div> -->
     </div>
 
 
     <?php include('php/connect.php') ?>
-
-    <div class="empty_space"></div>
 
     <footer>
         <div class="footer_content">
