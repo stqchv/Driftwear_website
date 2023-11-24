@@ -90,7 +90,18 @@
         </div>
         <!-- ---------------- SECTION 3 ---------------- -->
         <div class="section3">
-            
+            <div class="section3_container">
+                <h3>Join us</h3>
+                <h4>
+                    Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
+                    Each stitch is woven with passion, reflecting a blend of urban edge and timeless sophistication. 
+                    Our hoodies aren't just garments; they're a statement of individuality and cozy expression. 
+                    Designed for those who seek warmth without compromising on fashion, our collection brings together 
+                    innovation, comfort, and the allure of distinctive designs. Wrap yourself in our hoodies and step 
+                    into a world where comfort meets chic.
+                </h4>
+            </div>
+            <img class="section3_image reveal2" src="images/hoodie_section3.png">
         </div>
 
         <div class="empty_space"></div>

@@ -43,6 +43,26 @@ function reveal(){
     }
 }
 
+window.addEventListener('scroll', reveal2);
+
+function reveal2(){
+    var reveals = document.querySelectorAll('.reveal2');
+
+    for(var i = 0; i < reveals.length; i++){
+        
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop <windowheight - revealpoint){
+            reveals[i].classList.add('active2');
+        }
+        else{
+            reveals[i].classList.remove('active2');
+        }
+    }
+}
+
 /* ---------- Scroll to section ---------- */
 
 function scrollToSection(sectionId) {

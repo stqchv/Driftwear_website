@@ -28,7 +28,7 @@ html {
     --text-hover: rgb(133, 133, 133);
     --main-color: rgb(198, 40, 119);
     --second-color: rgb(39, 104, 225);
-    --white: rgb(252, 252, 252);
+    --bg-white: rgb(220, 231, 237);
     --border-color: rgba(20, 218, 175, 0.873);
     --help-border: rgb(255, 0, 0);
     --header-color: rgb(4, 5, 6);
@@ -53,7 +53,7 @@ h2 {
 
 h3 {
     font-family: 'Poppins';
-    font-size: 4rem;
+    font-size: 3.7rem;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -63,7 +63,7 @@ h3 {
 h4 {
     color: var(--text-color);
     font-family: 'Inter';
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
