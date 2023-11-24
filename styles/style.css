@@ -22,7 +22,7 @@ html {
 }
 
 :root {
-    --bg-color: rgb(9, 12, 16);
+    --bg-color: rgb(7, 9, 12);
     --bg-second-color: rgb(17, 17, 17);
     --text-color: #f0f0f0;
     --text-hover: rgb(133, 133, 133);

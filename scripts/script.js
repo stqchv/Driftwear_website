@@ -83,3 +83,19 @@ window.addEventListener('scroll', (e) => {
     });
 });
 
+/* ---------- Toggle button ---------- */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.size_button');
+  
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function () {
+            buttons.forEach(function(otherButton) {
+                if (otherButton !== button) {
+                    otherButton.classList.remove('active');
+                }
+            })
+            this.classList.toggle('active');
+        });
+    });
+});

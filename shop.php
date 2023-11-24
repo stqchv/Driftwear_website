@@ -59,7 +59,9 @@
             echo "<div class='shop_box'>";
                 echo "<div class='shop_image'>";
                     echo "<img src='{$data['image_front']}' class='img_front'>";
-                    echo "<img src='{$data['image_back']}' class='img_back'>";
+                    echo "<a href='product.php'>";
+                        echo "<img src='{$data['image_back']}' class='img_back'>";
+                    echo "</a>";
                 echo "</div>";
                 echo "<h6>{$data['name']}</h6>";
                 echo "<h7>€{$data['price']}.00</h7><br>";
