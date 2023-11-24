@@ -44,16 +44,15 @@
     flex-direction: row;
     font-size: 1rem;
     font-weight: 300;
+    cursor: pointer;
 }
 
-.size_button p:hover {
+.size_button.active {
     cursor: pointer;
     font-weight: 600;
 }
 
-.size_button.active p {
-    cursor: pointer;
-    opacity: 1;
+.size_button:hover {
     font-weight: 600;
 }
 

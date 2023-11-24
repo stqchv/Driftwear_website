@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/product.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
@@ -59,12 +60,12 @@
                 <div class="size_button" id="size-XL"><p>XL</p></div>
             </div>
             <div class="product_shipping"><p>Free shipping over €200.00</p></div>
-            <div class="product_details">Details</div>
+            <div class="product_details">Info</div>
             <div class="product_informations">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sapiente consequatur alias enim architecto blanditiis officia totam aspernatur exercitationem mollitia autem labore tenetur soluta quod veniam, nesciunt perferendis magni ullam?
+            The Basic Black Hoodie from Driftwear is a statement in understated elegance. The classic black canvas provides a timeless backdrop for the iconic Driftwear emblem on the chest. No frills, just the pure essence of urban cool.
             </div>
             <div class="product_details">Size Details</div>
-            <div class="product_informations">Our hoodies are unisex and oversize. We recommend chosing smaller size.</div>
+            <div class="product_informations">Our hoodies are unisex and oversize. We recommend choosing smaller size.</div>
             <div class="product_details">Shipping</div>
             <div class="product_informations">Predicted shipping time is 3-7 business days</div>
             <div class="product_buttons">
@@ -77,11 +78,6 @@
             </div>
         </div>
     </div>
-
-
-    <div class="empty_space"></div>
-
-
     
     <!-- ---------------- FOOTER ---------------- -->
 

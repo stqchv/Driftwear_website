@@ -61,15 +61,16 @@ footer {
 .footer_bottom {
     background: rgb(34, 34, 34);
     width: 100%;
-    padding: 10px 0;
+    padding: 8px 0;
     text-align: center;
 }
 
 .footer_bottom p {
-    font-size: 14px;
+    font-size: 0.8rem;
     word-spacing: 2px;
     text-transform: capitalize;
     color: white;
+    font-weight: 200;
 }
 
 .footer_bottom span {

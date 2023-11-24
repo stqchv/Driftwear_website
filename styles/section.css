@@ -163,7 +163,7 @@
 .section3 {
     position: relative;
     width: 100%;
-    background-color: var(--bg-white);
+    background-color: var(--header-color);
     z-index: 1;
 }
 
@@ -190,11 +190,11 @@
 }
 
 .section3_container h3 {
-    color: var(--bg-second-color);
+    color: var(--text-color);
 }
 
 .section3_container h4 {
-    color: var(--bg-second-color);
+    color: var(--text-color);
 }
 
 .reveal2 {
@@ -208,7 +208,30 @@
     filter: blur(3px);
 }
 
+.section3_socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
 
+.section3_socials li {
+    margin: 0 20px;
+}
+
+.section3_socials a {
+    color: var(--header-color);
+}
+
+.section3_socials a i{
+    font-size: 3rem;
+    transition: all .50s ease;
+}
+
+.section3_socials a:hover i {
+    transform: translateY(-5px);
+    color: var(--main-color);
+}
 
 
 

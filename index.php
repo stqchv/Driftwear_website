@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/footer.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
@@ -91,15 +92,17 @@
         <!-- ---------------- SECTION 3 ---------------- -->
         <div class="section3">
             <div class="section3_container">
-                <h3>Join us</h3>
+                <h3>Follow Us</h3>
                 <h4>
                     Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
-                    Each stitch is woven with passion, reflecting a blend of urban edge and timeless sophistication. 
-                    Our hoodies aren't just garments; they're a statement of individuality and cozy expression. 
-                    Designed for those who seek warmth without compromising on fashion, our collection brings together 
-                    innovation, comfort, and the allure of distinctive designs. Wrap yourself in our hoodies and step 
-                    into a world where comfort meets chic.
+                    Each stitch is woven with passion.
                 </h4>
+                <ul class="section3_socials">
+                    <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-tiktok'></i></a></li>
+                    <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+                </ul>
             </div>
             <img class="section3_image reveal2" src="images/hoodie_section3.png">
         </div>
