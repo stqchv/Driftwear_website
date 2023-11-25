@@ -47,6 +47,10 @@
 
     <!-- ---------------- SHOP CONTENT ---------------- -->
 
+
+    <?php include('php/connect.php') ?>
+
+
     <?php
     $mysqli = new mysqli('localhost','root','','driftwear_shop') or die($mysqli->connect_error);
     $table = 'products';
@@ -60,7 +64,7 @@
             echo "<div class='shop_box'>";
                 echo "<div class='shop_image'>";
                     echo "<img src='{$data['image_front']}' class='img_front'>";
-                    echo "<a href='product.php'>";
+                    echo "<a href='product.php?id={$data['id']}'>";
                         echo "<img src='{$data['image_back']}' class='img_back'>";
                     echo "</a>";
                 echo "</div>";
@@ -70,18 +74,21 @@
             echo "</div>";
         }
         ?>
-        <!-- <div class="shop_box">
-            <div class="shop_image">
-                <img src="images/hoodie_1.png" alt="">
-            </div>
-            <h6>Basic Driftwear Hoodie</h6>
-            <h7>€150.00</h7><br>
-            <h8>S M L XL</h8>
-        </div> -->
+
     </div>
 
+    <?php
+    // Połącz z bazą danych
 
-    <?php include('php/connect.php') ?>
+    // Pobierz wszystkie produkty z bazy danych
+    $products = fetchProductsFromDatabase();
+
+    foreach ($products as $product) {
+        // Wyświetl linki do stron produktów z parametrem id_produktu
+        echo "<a href='product.php?id={$product['id']}'>{$product['name']}</a><br>";
+    }
+    ?>
+
 
     <footer>
         <div class="footer_content">

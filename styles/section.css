@@ -29,6 +29,22 @@
     z-index: 1;
 }
 
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+
+.section1_right {
+    animation: floating 5s infinite ease-in-out;
+}
+
 .section1 img {
     width: 620px;
     transform-style: preserve-3d;
@@ -148,7 +164,7 @@
 .reveal {
     transform: translateX(-50px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 3s ease;
     filter: blur(1px);
 }
 

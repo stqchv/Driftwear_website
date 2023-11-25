@@ -46,13 +46,25 @@
 
     <div class="underbar"></div>
 
+    <?php
+    $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
+
+    if (isset($_GET['id'])) {
+        $productId = $_GET['id'];
+
+        $result = $mysqli->query("SELECT * FROM products WHERE id = $productId") or die($mysqli->error);
+        
+        if ($result->num_rows > 0) {
+            $productData = $result->fetch_assoc();
+    ?>
+    
     <div class="product_container">
         <div class="product_image">
-            <img src="images/products/hoodie_black_front.png">
+            <img src="<?php echo $productData['image_front']; ?>">
         </div>
         <div class="product_info">
-            <div class="product_name"><p>Basic Black Driftwear Hoodie</p></div>
-            <div class="product_price"><p>€150.00</p></div>
+            <div class="product_name"><p><?php echo $productData['name']; ?></p></div>
+            <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
             <div class="product_size">
                 <div class="size_button" id="size-S"><p>S</p></div>
                 <div class="size_button" id="size-M"><p>M</p></div>
@@ -78,6 +90,11 @@
             </div>
         </div>
     </div>
+
+    <?php
+        }
+    }
+    ?>
     
     <!-- ---------------- FOOTER ---------------- -->
 
