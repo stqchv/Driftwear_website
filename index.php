@@ -107,8 +107,6 @@
             <img class="section3_image reveal2" src="images/hoodie_section3.png">
         </div>
 
-        <div class="empty_space"></div>
-
     </div>
     <!-- ---------------- FOOTER ---------------- -->
 

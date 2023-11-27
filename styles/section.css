@@ -121,7 +121,7 @@
 }
 
 .section2 img {
-    width: 40vw;
+    width: 35vw;
     margin: 75px;
     /* border: 2px solid var(--border-color); */
 }
@@ -135,17 +135,18 @@
 
 .section2_right h3 {
     color: var(--text-color);
+    
 }
 
 .bg_fade_blue_2 {
     position: absolute;
     top: 1800px;
     right: 70vw;
-    width: 887px;
-    height: 887px;
+    width: 667px;
+    height: 667px;
     border-radius: 50%;
     background: var(--second-color);
-    opacity: 0.5;
+    opacity: 0.4;
     filter: blur(97px);
 }
 
@@ -181,6 +182,7 @@
     width: 100%;
     background-color: var(--header-color);
     z-index: 1;
+    margin-bottom: 200px;
 }
 
 .section3_image {

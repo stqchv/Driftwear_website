@@ -100,17 +100,16 @@
 
     <footer>
         <div class="footer_content">
-            <h3>Driftwear Footer</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo itaque eligendi inventore cumque.</p>
-            <ul class="socials">
-                <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
-                <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                <li><a href="#"><i class='bx bxl-tiktok'></i></a></li>
-                <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-            </ul>
-        </div>
-        <div class="footer_bottom">
-            <p>copyright &copy;2023 Driftwear. designed by <span>stqchv</span></p>
+            <h3>Driftwear&trade;</h3>
+            <div class="content">
+                <a href="#">Shop</a>
+                <a href="#">Contact</a>
+                <a href="#">Website Terms</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer_bottom">
+                <p>&copy; 2023 Made by <span>stqchv</span></p>
+            </div>
         </div>
     </footer>
 
