@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driftwear</title>
 
-    <link rel="icon" href="images/browser_icon.png">
+    <link rel="icon" href="../images/browser_icon.png">
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/section.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/section.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -26,11 +26,11 @@
     <!-- ---------------- HEADER ---------------- -->
     <header>
         <a href="index.php" class="logo">
-            <img src="./images/logo.png" alt="Logo">
+            <img src="../images/logo.png" alt="Logo">
         </a>
 
         <div class="nav__links">
-            <a href="shop.php">Shop</a>
+            <a href="../src/shop.php">Shop</a>
             <a href="#">Contact</a>
         </div>
 
@@ -57,14 +57,14 @@
                 <h1>DRIFT</h1>
                 <h1>WEAR</h1>
                 <div class="section1_buttons">
-                    <a href="shop.php">
+                    <a href="../src/shop.php">
                         <button class="shop-now">Shop Now</button>
                     </a>
                     <button onclick="scrollToSection('section2')" class="find-more">Find Out More</button>
                 </div>
             </div>
             <div class="section1_right">
-                <img class="hoodie_1" src="./images/hoodie_1.png" alt="">
+                <img class="hoodie_1" src="../images/hoodie_1.png" alt="">
             </div>
         </div>
 
@@ -75,7 +75,7 @@
             <div class="bg_fade_blue_2"></div>
             <div class="bg_fade_pink_2"></div>
             <div class="section2_left">
-                <img class="hoodie_2 reveal" src="images/hoodie_2.png" alt="">
+                <img class="hoodie_2 reveal" src="../images/hoodie_2.png" alt="">
             </div>
             <div class="section2_right">
                 <h3>Who We Are</h3>
@@ -104,7 +104,7 @@
                     <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
                 </ul>
             </div>
-            <img class="section3_image reveal2" src="images/hoodie_section3.png">
+            <img class="section3_image reveal2" src="../images/hoodie_section3.png">
         </div>
 
     </div>
@@ -125,6 +125,6 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js" async defender></script>
+    <script src="../scripts/script.js" async defender></script>
 </body>
 </html>

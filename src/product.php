@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driftwear</title>
 
-    <link rel="icon" href="images/browser_icon.png">
+    <link rel="icon" href="../images/browser_icon.png">
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/section.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/product.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/section.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/product.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -26,8 +26,8 @@
     </div>
     <!-- ---------------- HEADER ---------------- -->
     <header>
-        <a href="index.php" class="logo">
-            <img src="./images/logo.png" alt="Logo">
+        <a href="../src/index.php" class="logo">
+            <img src="../images/logo.png" alt="Logo">
         </a>
 
         <div class="nav__links">
