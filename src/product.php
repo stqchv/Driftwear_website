@@ -113,6 +113,6 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js" async defender></script>
+    <script src="../scripts/script.js" async defender></script>
 </body>
 </html>

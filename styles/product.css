@@ -47,17 +47,18 @@
     cursor: pointer;
 }
 
-.size_button.active {
-    cursor: pointer;
-    font-weight: 600;
+.size_button {
+    margin: 10px 10px 10px 0;
+    font-weight: 200;
 }
 
 .size_button:hover {
     font-weight: 600;
 }
 
-.size_button {
-    margin: 10px 10px 10px 0;
+.size_button.active {
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .product_shipping {

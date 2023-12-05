@@ -85,7 +85,7 @@ window.addEventListener('scroll', (e) => {
 
 /* ---------- Toggle button ---------- */
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
     const buttons = document.querySelectorAll('.size_button');
   
     buttons.forEach(function(button) {
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             })
             this.classList.toggle('active');
+            selectedSize = this.id; // Zapamiętaj ID klikniętego przycisku
         });
     });
 });
