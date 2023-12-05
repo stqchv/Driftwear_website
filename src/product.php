@@ -63,8 +63,8 @@
             <img src="<?php echo $productData['image_front']; ?>">
         </div>
         <div class="product_info">
-            <div class="product_name"><p><?php echo $productData['name']; ?></p></div>
-            <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
+            <div class="product_name" data-name="<?php echo htmlspecialchars($productData['name']); ?>"><p><?php echo $productData['name']; ?></p></div>
+            <div class="product_price" data-price="<?php echo htmlspecialchars($productData['price']); ?>"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
             <div class="product_size">
                 <div class="size_button" id="size-S"><p>S</p></div>
                 <div class="size_button" id="size-M"><p>M</p></div>
@@ -82,7 +82,7 @@
             <div class="product_informations">Predicted shipping time is 3-7 business days</div>
             <div class="product_buttons">
                 <a href="shop.php">
-                    <button class="addCart">Add To Cart</button>
+                    <button class="addCart" onclick="addToCart()">Add To Cart</button>
                 </a>
                 <a href="shop.php">
                     <button class="checkout">Checkout</button>
@@ -114,5 +114,6 @@
     </footer>
 
     <script src="../scripts/script.js" async defender></script>
+    <script src="../scripts/cart.js" async defender></script>
 </body>
 </html>
