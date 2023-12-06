@@ -3,6 +3,7 @@ function addToCart() {
     const productName = document.getElementById('product').getAttribute('data-name');
     const productPrice = document.getElementById('product').getAttribute('data-price');
     const productSize = selectedSize;
+    const productID = document.getElementById('');
   
     // Utwórz obiekt FormData i dodaj dane produktu
     const formData = new FormData();

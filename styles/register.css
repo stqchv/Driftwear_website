@@ -1,0 +1,46 @@
+.register_container {
+    max-width: 600px;
+    margin: 200px auto;
+    padding: 50px;
+    background-color: var(--header-color)
+}
+
+.register_container h3 {
+    margin-left: 20px;
+}
+
+.form_group {
+    margin: 20px;
+    size: 1.5rem;
+}
+
+input {
+    outline: none;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--header-color);
+    border: 1px solid var(--text-color);
+    transition: all .2s ease-in-out;
+}
+
+input[type=text]:focus {
+    border: 1px solid var(--second-color);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

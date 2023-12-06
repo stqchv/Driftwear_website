@@ -63,8 +63,8 @@
             <img src="<?php echo $productData['image_front']; ?>">
         </div>
         <div class="product_info">
-            <div class="product_name" data-name="<?php echo htmlspecialchars($productData['name']); ?>"><p><?php echo $productData['name']; ?></p></div>
-            <div class="product_price" data-price="<?php echo htmlspecialchars($productData['price']); ?>"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
+            <div class="product_name"><p><?php echo $productData['name']; ?></p></div>
+            <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
             <div class="product_size">
                 <div class="size_button" id="size-S"><p>S</p></div>
                 <div class="size_button" id="size-M"><p>M</p></div>
