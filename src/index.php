@@ -35,7 +35,15 @@
         </div>
 
         <div class="profile">
-            <a href="../src/register.php" class="user"><i class="fa-regular fa-user"></i></a>
+            <?php
+                session_start();
+                if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
+                    echo "<a href='../src/logout.php' class='user'>Logout</a>";
+                }
+                else {
+                    echo "<a href='../src/login.php' class='user'>Login</a>";
+                }
+            ?>
             <a href="#" class="cart"><i class="ri-shopping-bag-fill"></i></a>
             <div id="menu-icon"></div>
         </div>

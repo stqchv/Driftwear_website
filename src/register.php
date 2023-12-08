@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["user"])) {
+        header("Location: ../src/index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +43,7 @@
         </div>
 
         <div class="profile">
-            <a href="../src/register.php" class="user"><i class="fa-regular fa-user"></i></a>
+            <a href="../src/login.php" class="user">Login</a>
             <a href="#" class="cart"><i class="ri-shopping-bag-fill"></i></a>
             <div id="menu-icon"></div>
         </div>
@@ -58,7 +65,7 @@
             <a href="../src/login.php" class="login_link">log in</a>
             if you already have account
         </h5>
-        <form action="" method="post">
+        <form action="register.php" method="post">
             <div class="form_group1">
                 <input type="text" class="register_input" name="email" placeholder="Email">
             </div>
@@ -70,10 +77,13 @@
             </div>
 
             <?php 
+
             if (isset($_POST["submit"])) {
                 $email = $_POST["email"];
                 $password = $_POST["password"];
                 $passwordRepeat = $_POST["repeat_password"];
+
+                $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
                 $errors = array();
 
@@ -89,12 +99,33 @@
                 if ($password!==$passwordRepeat) {
                     array_push($errors, "Password does not match");
                 }
+                require_once "../php/connect.php";
+                $sql = "SELECT * FROM users WHERE email = '$email'";
+                $result = mysqli_query($conn, $sql);
+                $rowCount = mysqli_num_rows($result);
+                if ($rowCount>0) {
+                    array_push($errors, "Account with this email already exists");
+                }
                 if (count($errors)>0) {
                     foreach ($errors as $error) {
-                        echo "<div class='login_error'>$error</div>";
+                        echo "<div class='login_error'>&times; $error</div>";
+                    }
+                } 
+                else {
+                    $sql = "INSERT INTO users (email, password) VALUES ( ?, ? )";
+                    $stmt = mysqli_stmt_init($conn);
+                    $prepareStmt = mysqli_stmt_prepare($stmt, $sql);
+                    if ($prepareStmt) {
+                        mysqli_stmt_bind_param($stmt,"ss",$email,$passwordHash);
+                        mysqli_stmt_execute($stmt);
+                        echo "<h5>&#10003;  Account created successfully</h5>";
+                    } 
+                    else {
+                        die("Błąd: " . mysqli_stmt_error($stmt));
                     }
                 }
             }
+
             ?>
 
             
