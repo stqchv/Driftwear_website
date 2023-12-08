@@ -32,11 +32,11 @@
 
         <div class="nav__links">
             <a href="../src/shop.php">Shop</a>
-            <a href="#">Contact</a>
+            <a href="../src/contact.php">Contact</a>
         </div>
 
         <div class="profile">
-            <a href="#" class="user"><i class="fa-regular fa-user"></i></a>
+            <a href="../src/register.php" class="user"><i class="fa-regular fa-user"></i></a>
             <a href="#" class="cart"><i class="ri-shopping-bag-fill"></i></a>
             <div id="menu-icon"></div>
         </div>
@@ -48,10 +48,18 @@
 
     <!-- ---------------- REGISTRATION ---------------- -->
 
+    <div class="bg_fade_blue_reg"></div>
+    <div class="bg_fade_pink_reg"></div>
+
     <div class="register_container">
+        
         <h3>Register</h3>
-        <form action="../login.php" method="post">
-            <div class="form_group">
+        <h5>Or 
+            <a href="../src/login.php" class="login_link">log in</a>
+            if you already have account
+        </h5>
+        <form action="" method="post">
+            <div class="form_group1">
                 <input type="text" class="register_input" name="email" placeholder="Email">
             </div>
             <div class="form_group">
@@ -60,8 +68,39 @@
             <div class="form_group">
                 <input type="text" class="register_input" name="repeat_password" placeholder="Password repeat">
             </div>
+
+            <?php 
+            if (isset($_POST["submit"])) {
+                $email = $_POST["email"];
+                $password = $_POST["password"];
+                $passwordRepeat = $_POST["repeat_password"];
+
+                $errors = array();
+
+                if (empty($email) OR empty($password) OR empty($passwordRepeat)) {
+                    array_push($errors, "All fields are required");
+                }
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    array_push($errors, "Email is not valid");
+                }
+                if (strlen($password)<8) {
+                    array_push($errors, "Password must be at least 8 letters long");
+                }
+                if ($password!==$passwordRepeat) {
+                    array_push($errors, "Password does not match");
+                }
+                if (count($errors)>0) {
+                    foreach ($errors as $error) {
+                        echo "<div class='login_error'>$error</div>";
+                    }
+                }
+            }
+            ?>
+
+            
+
             <div class="form_group">
-                <input type="submit" class="register_button" name="submit" value="Register">
+                <input type="submit" name="submit" value="Register">
             </div>
         </form>
     </div>

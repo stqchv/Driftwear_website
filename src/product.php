@@ -31,12 +31,12 @@
         </a>
 
         <div class="nav__links">
-            <a href="shop.php">Shop</a>
-            <a href="#">Contact</a>
+            <a href="../src/shop.php">Shop</a>
+            <a href="../src/contact.php">Contact</a>
         </div>
 
         <div class="profile">
-            <a href="#" class="user"><i class="fa-regular fa-user"></i></a>
+            <a href="../src/register.php" class="user"><i class="fa-regular fa-user"></i></a>
             <a href="#" class="cart"><i class="ri-shopping-bag-fill"></i></a>
             <div id="menu-icon"></div>
         </div>

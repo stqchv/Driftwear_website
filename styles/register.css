@@ -1,12 +1,26 @@
 .register_container {
     max-width: 600px;
-    margin: 200px auto;
+    margin: 150px auto;
     padding: 50px;
     background-color: var(--header-color)
 }
 
 .register_container h3 {
     margin-left: 20px;
+}
+
+.register_container h5 {
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.login_link {
+    color: var(--second-color);
+}
+
+.form_group1 {
+    margin: 10px 20px 0 20px;
+    size: 1.5rem;
 }
 
 .form_group {
@@ -36,11 +50,51 @@ input[type=text]:focus {
 
 input[type=submit] {
     width: 100%;
-    background-color: var(--main-color);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    padding: 16px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all 250ms;
+    border: 2px solid var(--main-color);
+}
+
+input[type=submit]:hover {
+    transform: translateY(-2px);
+    background-color: var(--main-color);
+    color: var(--header-color);
+}
+
+.login_error {
+    margin: 10px 0 0 20px;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+.bg_fade_blue_reg {
+    position: absolute;
+    top: 10vh;
+    left: 75vw;
+    width: 887px;
+    height: 887px;
+    border-radius: 50%;
+    background: var(--second-color);
+    opacity: 0.4;
+    filter: blur(97px);
+}
+
+.bg_fade_pink_reg {
+    position: absolute;
+    top: -35vh;
+    right: 70vw;
+    width: 667px;
+    height: 667px;
+    border-radius: 50%;
+    background: var(--main-color);
+    opacity: 0.4;
+    filter: blur(97px);
 }
