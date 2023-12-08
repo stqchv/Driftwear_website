@@ -44,8 +44,6 @@
 
         <div class="profile">
             <a href="../src/login.php" class="user">Login</a>
-            <a href="#" class="cart"><i class="ri-shopping-bag-fill"></i></a>
-            <div id="menu-icon"></div>
         </div>
     </header>
 
