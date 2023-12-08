@@ -81,19 +81,19 @@
             <div class="product_shipping"><p>Free shipping over €200.00</p></div>
             <div class="product_details">Info</div>
             <div class="product_informations">
-            The Basic Black Hoodie from Driftwear is a statement in understated elegance. The classic black canvas provides a timeless backdrop for the iconic Driftwear emblem on the chest. No frills, just the pure essence of urban cool.
+            The <?php echo $productData['name']; ?> is a statement in understated elegance. The classic black canvas provides a timeless backdrop for the iconic Driftwear emblem on the chest. No frills, just the pure essence of urban cool.
             </div>
             <div class="product_details">Size Details</div>
             <div class="product_informations">Our hoodies are unisex and oversize. We recommend choosing smaller size.</div>
             <div class="product_details">Shipping</div>
             <div class="product_informations">Predicted shipping time is 3-7 business days</div>
             <div class="product_buttons">
-                <a href="shop.php">
-                    <button class="addCart" onclick="addToCart()">Add To Cart</button>
-                </a>
-                <a href="shop.php">
-                    <button class="checkout">Checkout</button>
-                </a>
+                <form method="post" action="shop.php?id=<?=$row['id'] ?>">
+                    <input type="submit" name="add_to_cart" class="addCart" value="Add to cart">
+                    <a href="shop.php">
+                        <button class="checkout">Checkout</button>
+                    </a>
+                </form>
             </div>
         </div>
     </div>

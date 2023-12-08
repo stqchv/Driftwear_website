@@ -103,6 +103,24 @@
     border: 2px solid var(--second-color);
 }
 
+input[type="submit"] {
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: var(--second-color);
+    color: var(--bg-color);
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all 250ms;
+    border: 2px solid var(--second-color);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
 .checkout {
     border: 2px solid var(--second-color);
     background-color: var(--background-color);
