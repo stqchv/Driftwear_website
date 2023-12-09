@@ -68,8 +68,9 @@
     <div class="product_container">
         <div class="product_image">
             <img src="<?php echo $productData['image_front']; ?>">
+            <img src="<?php echo $productData['image_back']; ?>">
         </div>
-        <div class="product_info">
+        <div class="product_info" id="productInfo">
             <div class="product_name"><p><?php echo $productData['name']; ?></p></div>
             <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
             <div class="product_size">

@@ -83,7 +83,7 @@ window.addEventListener('scroll', (e) => {
     });
 });
 
-/* ---------- Toggle button ---------- */
+/* ---------- Size selector ---------- */
 
 window.addEventListener('load', function () {
     const buttons = document.querySelectorAll('.size_button');
@@ -96,8 +96,23 @@ window.addEventListener('load', function () {
                 }
             })
             this.classList.toggle('active');
-            selectedSize = this.id; // Zapamiętaj ID klikniętego przycisku
+            selectedSize = this.id;
         });
     });
 });
 
+/* ---------- Product info positioning ---------- */
+
+window.onscroll = function() { myFunction() };
+
+    var header = document.getElementById("productInfo");
+    var sticky = header.offsetTop + 500; // Ustaw dowolną wartość graniczną
+
+    function myFunction() {
+        if (window.scrollY > sticky) {
+            header.classList.remove("fixed");
+        } 
+        else {
+            header.classList.add("fixed");
+        }
+    }

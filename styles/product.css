@@ -13,21 +13,27 @@
 
 .product_image {
     padding: 30px 10px 30px 10px;
-    display: flex;
     width: 50%;
     background-color: var(--header-color);
     /* border: 2px solid var(--border-color); */
 }
 
 .product_image img {
+    display: block;
     margin: auto;
     width: 80%;
 }
 
-.product_info {
+#productInfo {
+    transition: all 0.3s ease; /* Dodane dla płynnego efektu */
     padding: 50px;
     width: 50%;
-    /* border: 2px solid var(--border-color); */
+    border: 2px solid var(--border-color);
+    left: 50vw;
+}
+
+#productInfo.fixed {
+    position: fixed;
 }
 
 .product_name p {
