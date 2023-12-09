@@ -102,17 +102,3 @@ window.addEventListener('load', function () {
 });
 
 /* ---------- Product info positioning ---------- */
-
-window.onscroll = function() { myFunction() };
-
-    var header = document.getElementById("productInfo");
-    var sticky = header.offsetTop + 500; // Ustaw dowolną wartość graniczną
-
-    function myFunction() {
-        if (window.scrollY > sticky) {
-            header.classList.remove("fixed");
-        } 
-        else {
-            header.classList.add("fixed");
-        }
-    }

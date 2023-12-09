@@ -104,7 +104,7 @@
                 <a href="#">Privacy Policy</a>
             </div>
             <div class="footer_bottom">
-                <p>&copy; 2023 Made by <span>stqchv</span></p>
+                <p>&copy; 2023 Made by <span>Tomasz Stasiński & Jakub Pytlarz</span></p>
             </div>
         </div>
     </footer>
