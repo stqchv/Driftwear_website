@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 09 Gru 2023, 19:01
--- Wersja serwera: 10.4.27-MariaDB
--- Wersja PHP: 8.0.25
+-- Generation Time: Dec 09, 2023 at 07:09 PM
+-- Wersja serwera: 10.4.28-MariaDB
+-- Wersja PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `driftwear_shop`
+-- Database: `driftwear_shop`
 --
 
 -- --------------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image_front`, `image_back`) VALUES
@@ -59,7 +59,10 @@ INSERT INTO `products` (`id`, `name`, `price`, `image_front`, `image_back`) VALU
 (6, 'Basic Brown Driftwear Hoodie', 170, '../images/products/hoodie_brown_front.png', '../images/products/hoodie_brown_back.png'),
 (7, 'Basic Navy Driftwear Hoodie', 150, '../images/products/hoodie_navy_front.png', '../images/products/hoodie_navy_back.png'),
 (8, 'Basic Green Driftwear Hoodie', 150, '../images/products/hoodie_green_front.png', '../images/products/hoodie_green_back.png'),
-(9, 'Basic Purple Driftwear Hoodie', 150, '../images/products/hoodie_purple_front.png', '../images/products/hoodie_purple_back.png');
+(9, 'Basic Purple Driftwear Hoodie', 150, '../images/products/hoodie_purple_front.png', '../images/products/hoodie_purple_back.png'),
+(10, 'Basic White Driftwear Hoodie', 150, '../images/products/hoodie_white_front.png', '../images/products/hoodie_white_back.png'),
+(11, 'Basic Black Driftwear Hoodie', 150, '../images/products/hoodie_black_front.png', '../images/products/hoodie_black_back.png'),
+(12, 'Basic Navy Driftwear Hoodie', 150, '../images/products/hoodie_navy_front.png', '../images/products/hoodie_navy_back.png');
 
 -- --------------------------------------------------------
 
@@ -74,7 +77,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`) VALUES
@@ -97,17 +100,17 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT dla zrzuconych tabel
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT dla tabeli `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
