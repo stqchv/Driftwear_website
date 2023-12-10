@@ -96,23 +96,58 @@
                 </h4>
             </div>
         </div>
+
         <!-- ---------------- SECTION 3 ---------------- -->
         <div class="section3">
             <div class="section3_container">
-                <h3>Follow Us</h3>
-                <h4>
-                    Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
-                    Each stitch is woven with passion.
-                </h4>
-                <ul class="section3_socials">
-                    <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-tiktok'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                </ul>
+                <div class="section3_left">
+                    <h3>Discover Our Collection</h3>
+                    <h4><br>
+                    Elevate your love for automotive with our unique collections. Whether you prefer the classic look of '70s cars or 
+                    you're a fan of modern technology, we have something special for you. Explore our collections and choose a hoodie 
+                    that best reflects your passion.<br><br>
+                    DriftWear is where the passion for automobiles meets aesthetics. We are a team of enthusiasts who love the freedom 
+                    of the road and stylish fashion. Our collection of automotive-inspired aesthetic hoodies is a blend of comfort, quality, 
+                    and unique design. We're not just a store; we're a community of like-minded automotive aficionados.
+                    </h4>
+                </div>
+                <div class="section3_right">
+                    <img class="" src="../images/hoodies.png" alt="">
+                </div>
             </div>
-            <img class="section3_image reveal2" src="../images/hoodie_section3.png">
+
+            <!-- ---------------- SECTION 4 ---------------- -->
+            <div class="section3_container">
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img src="1.png" alt="">
+                    </div>
+                    <div class="mySlides">
+                        <img src="2.png" alt="">
+                    </div>
+                    <div class="mySlides">
+                        <img src="3.png" alt="">
+                    </div>
+                    <div class="mySlides">
+                        <img src="4.png" alt="">
+                    </div>
+                </div>
+                <div class="section3_left">
+                    <h3>Quality Fabrics</h3>
+                    <h4><br>
+                    At DriftWear, we understand that the right material is the foundation of exceptional apparel. That's why we take pride in sourcing and using 
+                    premium materials to create hoodies that not only look good but also feel amazing to wear.<br>
+                    Our commitment to quality begins with the selection of fabrics. We carefully choose materials that are soft to the touch, 
+                    durable, and provide the perfect blend of comfort and style. You'll notice the difference from the moment you put on one of our hoodies.
+                    </h4>
+                </div>
+            </div>
+
         </div>
+
+        
+
+
 
     </div>
     <!-- ---------------- FOOTER ---------------- -->
