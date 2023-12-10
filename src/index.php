@@ -112,33 +112,35 @@
                     </h4>
                 </div>
                 <div class="section3_right">
-                    <img class="" src="../images/hoodies.png" alt="">
+                    <img class="hoodie_3 reveal" src="../images/hoodies.png" alt="">
                 </div>
             </div>
 
             <!-- ---------------- SECTION 4 ---------------- -->
             <div class="section3_container">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <img src="1.png" alt="">
+                <div class="wrapper reveal">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="carousel">
+                        <img src="../images/slider/1.png" alt="img" draggable="false">
+                        <img src="../images/slider/2.png" alt="img" draggable="false">
+                        <img src="../images/slider/3.png" alt="img" draggable="false">
+                        <img src="../images/slider/4.png" alt="img" draggable="false">
+                        <img src="../images/slider/1.png" alt="img" draggable="false">
+                        <img src="../images/slider/2.png" alt="img" draggable="false">
+                        <img src="../images/slider/3.png" alt="img" draggable="false">
+                        <img src="../images/slider/4.png" alt="img" draggable="false">
                     </div>
-                    <div class="mySlides">
-                        <img src="2.png" alt="">
-                    </div>
-                    <div class="mySlides">
-                        <img src="3.png" alt="">
-                    </div>
-                    <div class="mySlides">
-                        <img src="4.png" alt="">
-                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
                 </div>
-                <div class="section3_left">
+                <div class="section4_left">
                     <h3>Quality Fabrics</h3>
                     <h4><br>
                     At DriftWear, we understand that the right material is the foundation of exceptional apparel. That's why we take pride in sourcing and using 
-                    premium materials to create hoodies that not only look good but also feel amazing to wear.<br>
+                    premium materials to create hoodies that not only look good but also feel amazing to wear.<br><br>
                     Our commitment to quality begins with the selection of fabrics. We carefully choose materials that are soft to the touch, 
-                    durable, and provide the perfect blend of comfort and style. You'll notice the difference from the moment you put on one of our hoodies.
+                    durable, and provide the perfect blend of comfort and style. You'll notice the difference from the moment you put on one of our hoodies.<br><br>
+                    The stitching and construction of our hoodies are designed with your comfort in mind. We pay meticulous attention to detail to ensure that each 
+                    hoodie is not only a fashionable statement but also a pleasure to wear, whether you're cruising down the road or relaxing at home.
                     </h4>
                 </div>
             </div>
