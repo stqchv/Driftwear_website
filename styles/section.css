@@ -120,22 +120,27 @@
     /* border: 2px solid var(--border-color); */
 }
 
-.section2 img {
-    width: 35vw;
-    margin: 75px;
+.section2_left {
+    flex: 1;
+    /* border: 2px solid var(--border-color); */
+    padding: 140px 0 140px 0;
+}
+
+.section2_left img {
+    display: block;
+    max-width: 88%;
+    margin: auto;
     /* border: 2px solid var(--border-color); */
 }
 
 .section2_right {
-    margin-right: 75px;
-    z-index: 1;
+    flex: 1;
     transition: all .5 ease;
     /* border: 2px solid var(--border-color); */
 }
 
 .section2_right h3 {
     color: var(--text-color);
-    
 }
 
 .bg_fade_blue_2 {
