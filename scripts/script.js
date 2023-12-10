@@ -101,4 +101,4 @@ window.addEventListener('load', function () {
     });
 });
 
-/* ---------- Product info positioning ---------- */
+
