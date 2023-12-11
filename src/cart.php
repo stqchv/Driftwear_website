@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +41,7 @@
                 session_start();
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
-                    echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
+                    echo "<a href='#' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
                 }
                 else {
                     echo "<a href='../src/login.php' class='user'>Login</a>";
@@ -50,47 +52,36 @@
     <!-- ---------------- place under navbar ---------------- -->
     <div class="underbar"></div>
 
+    <!-- ---------------- Cart Section ---------------- -->
 
-
-    <!-- ---------------- SHOP CONTENT ---------------- -->
-
-
-    <?php include('../php/connect.php') ?>
-
+    <div class="empty_space"></div>
 
     <?php
-    $mysqli = new mysqli('localhost','root','','driftwear_shop') or die($mysqli->connect_error);
-    $table = 'products';
 
-    $result = $mysqli->query("SELECT * FROM $table") or die($mysqli->error);
-    ?>
+    // Usuwanie produktu z koszyka
+    if (isset($_POST['remove_from_cart'])) {
+        $productIdToRemove = $_POST['product_id'];
 
-    <div class="shop_content">
-        <?php
-        while ($data = $result->fetch_assoc()){
-            echo "<div class='shop_box'>";
-                echo "<div class='shop_image'>";
-                    echo "<img src='{$data['image_front']}' class='img_front'>";
-                    echo "<a href='product.php?id={$data['id']}'>";
-                        echo "<img src='{$data['image_back']}' class='img_back'>";
-                    echo "</a>";
-                echo "</div>";
-                echo "<h6>{$data['name']}</h6>";
-                echo "<h7>€{$data['price']}.00</h7><br>";
-                echo "<h8 class='shop_size'>S M L XL</h8>";
-            echo "</div>";
+        // Usuń produkt z koszyka
+        unset($_SESSION['cart'][$productIdToRemove]);
+    }
+
+    // Wyświetl zawartość koszyka
+    if (!empty($_SESSION['cart'])) {
+        foreach ($_SESSION['cart'] as $productId => $product) {
+            echo "Product ID: $productId, Name: {$product['name']}, Price: {$product['price']}, Quantity: {$product['quantity']}";
+
+            // Dodaj formularz do usuwania produktu
+            echo "<form method='post'>";
+            echo "<input type='hidden' name='product_id' value='$productId'>";
+            echo "<input type='submit' name='remove_from_cart' value='Remove'>";
+            echo "</form>";
+
+            echo "<br>";
         }
-        ?>
-
-    </div>
-
-    <?php
-
-    // $products = fetchProductsFromDatabase();
-
-    // foreach ($products as $product) {
-    //     echo "<a href='product.php?id={$product['id']}'>{$product['name']}</a><br>";
-    // }
+    } else {
+        echo "Twój koszyk jest pusty.";
+    }
     ?>
 
 

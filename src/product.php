@@ -1,3 +1,28 @@
+<?php
+session_start();    
+
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+
+if (isset($_POST['add_to_cart'])) {
+    $productId = $_POST['product_id'];
+    if (isset($_SESSION['cart'][$productId])) {
+        $_SESSION['cart'][$productId]['quantity']++;
+    } else {
+        $_SESSION['cart'][$productId] = array(
+            'name' => $_POST['product_name'],
+            'price' => $_POST['product_price'],
+            'quantity' => 1,
+        );
+    }
+    header("Location: ../src/shop.php");
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +62,10 @@
 
         <div class="profile">
             <?php
-                session_start();
+                
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
-                    echo "<a href='#' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
+                    echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
                 }
                 else {
                     echo "<a href='../src/login.php' class='user'>Login</a>";
@@ -89,11 +114,11 @@
             <div class="product_details">Shipping</div>
             <div class="product_informations">Predicted shipping time is 3-7 business days</div>
             <div class="product_buttons">
-                <form method="post" action="shop.php?id=<?=$row['id'] ?>">
-                    <input type="submit" name="add_to_cart" class="addCart" value="Add to cart">
-                    <a href="shop.php">
-                        <button class="checkout">Checkout</button>
-                    </a>
+                <form method="post" action="product.php">
+                    <input type="hidden" name="product_id" value="<?php echo $productData['id']; ?>">
+                    <input type="hidden" name="product_name" value="<?php echo $productData['name']; ?>">
+                    <input type="hidden" name="product_price" value="<?php echo $productData['price']; ?>">
+                    <input type="submit" name="add_to_cart" class="addCart" value="Add to Cart">
                 </form>
             </div>
         </div>

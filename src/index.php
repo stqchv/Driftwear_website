@@ -39,7 +39,7 @@
                 session_start();
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
-                    echo "<a href='#' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
+                    echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
                 }
                 else {
                     echo "<a href='../src/login.php' class='user'>Login</a>";
