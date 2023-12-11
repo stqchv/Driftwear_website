@@ -1,26 +1,50 @@
 <?php
 session_start();    
 
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = array();
-}
+$mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
 
 if (isset($_POST['add_to_cart'])) {
-    $productId = $_POST['product_id'];
-    if (isset($_SESSION['cart'][$productId])) {
-        $_SESSION['cart'][$productId]['quantity']++;
-    } else {
-        $_SESSION['cart'][$productId] = array(
-            'name' => $_POST['product_name'],
-            'price' => $_POST['product_price'],
-            'quantity' => 1,
-        );
+
+    if (isset($_SESSION["user"])) {
+        $productId = $_POST['product_id'];
+        $userId = $_SESSION["user_id"];
+        $quantity = 1;
+
+        $checkStmt = $mysqli->prepare("SELECT id, quantity FROM carts WHERE user_id = ? AND product_id = ?");
+        $checkStmt->bind_param("ii", $userId, $productId);
+        $checkStmt->execute();
+        $checkStmt->store_result();
+
+        if ($checkStmt->num_rows > 0) {
+            $checkStmt->bind_result($cartId, $existingQuantity);
+            $checkStmt->fetch();
+
+            $newQuantity = $existingQuantity + $quantity;
+
+            $updateStmt = $mysqli->prepare("UPDATE carts SET quantity = ? WHERE id = ?");
+            $updateStmt->bind_param("ii", $newQuantity, $cartId);
+            $updateStmt->execute();
+            $updateStmt->close();
+        }
+        else {
+            $insertStmt = $mysqli->prepare("INSERT INTO carts (user_id, product_id, quantity) VALUES (?, ?, ?)");
+            $insertStmt->bind_param("iii", $userId, $productId, $quantity);
+            $insertStmt->execute();
+            $insertStmt->close();
+        }
+        $checkStmt->close();
+        $_SESSION['cart'][] = $productId;
+
+        header("Location: ../src/shop.php");
     }
-    header("Location: ../src/shop.php");
+    else {
+        header("Location: ../src/login.php");
+    }
     exit();
 }
 
 ?>
+
 
 
 <!DOCTYPE html>

@@ -84,6 +84,7 @@
                     if (password_verify($password, $users["password"])) {
                         session_start();
                         $_SESSION["user"] = "yes";
+                        $_SESSION["user_id"] = $users["id"];
                         header("Location: ../src/index.php");
                         die();
                     }

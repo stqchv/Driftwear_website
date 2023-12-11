@@ -57,30 +57,26 @@
     <div class="empty_space"></div>
 
     <?php
+    $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
 
-    // Usuwanie produktu z koszyka
-    if (isset($_POST['remove_from_cart'])) {
-        $productIdToRemove = $_POST['product_id'];
-
-        // Usuń produkt z koszyka
-        unset($_SESSION['cart'][$productIdToRemove]);
-    }
-
-    // Wyświetl zawartość koszyka
-    if (!empty($_SESSION['cart'])) {
-        foreach ($_SESSION['cart'] as $productId => $product) {
-            echo "Product ID: $productId, Name: {$product['name']}, Price: {$product['price']}, Quantity: {$product['quantity']}";
-
-            // Dodaj formularz do usuwania produktu
-            echo "<form method='post'>";
-            echo "<input type='hidden' name='product_id' value='$productId'>";
-            echo "<input type='submit' name='remove_from_cart' value='Remove'>";
-            echo "</form>";
-
-            echo "<br>";
+    if (isset($_SESSION["user"])) {
+        $userId = $_SESSION["user_id"];
+        $result = $mysqli->query("SELECT c.product_id, p.name, p.price, p.image_front, c.quantity FROM carts c
+                                INNER JOIN products p ON c.product_id = p.id
+                                WHERE c.user_id = $userId");
+        if ($result) {
+            if ($result->num_rows > 0) {
+                echo "<h2>Your Cart:</h2>";
+                echo "<div class='cart'>";
+                while ($row = $result->fetch_assoc()) {
+                    echo "<li>{$row['name']} <img class='hoodie_icon' src='{$row['image_front']}' alt=''>";
+                    echo "- Price: €{$row['price']}, Quantity: {$row['quantity']}</li>";
+                }
+                echo "</div>";
+            } else {
+                echo "<p>Your cart is empty</p>";
+            }
         }
-    } else {
-        echo "Twój koszyk jest pusty.";
     }
     ?>
 
