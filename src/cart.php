@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +9,8 @@
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/section.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/shop.css">
+    <link rel="stylesheet" href="../styles/cart.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -54,7 +51,23 @@
 
     <!-- ---------------- Cart Section ---------------- -->
 
-    <div class="empty_space"></div>
+    <!-- <div class="cart">
+        <h2>Your Cart</h2>
+
+        <div class="cart_product">
+            <div class="cart_image">
+                <img src="../images/products/hoodie_black_front.png" alt="">
+            </div>
+            <div class="product_info">$150.00</div>
+            <div class="product_remove"></div>
+        </div>
+
+        <div class="shop_summary">
+
+        </div>
+    </div> -->
+
+
 
     <?php
     $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
