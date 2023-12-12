@@ -85,6 +85,8 @@ window.addEventListener('scroll', (e) => {
 
 /* ---------- Size selector ---------- */
 
+const selectedSizeInput = document.getElementById('selectedSizeInput');
+
 window.addEventListener('load', function () {
     const buttons = document.querySelectorAll('.size_button');
   
@@ -98,6 +100,7 @@ window.addEventListener('load', function () {
             this.classList.toggle('active');
             selectedSize = this.id;
             selectedSizeInput.value = selectedSize;
+            console.log('selectedSizeInput.value:', selectedSizeInput.value);
         });
     });
 });

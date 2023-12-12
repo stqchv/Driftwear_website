@@ -52,18 +52,9 @@
 
     <!-- ---------------- Cart Section ---------------- -->
 
-    
-
-    
-
-        
-
-    
     <div class="cart_">
-        
 
         <div class="cart_section">
-
 
         <?php
         $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
@@ -88,7 +79,7 @@
                         echo "            <h4>Quantity: {$row['quantity']}</h4>";
                         echo "        </div>";
                         echo "        <div class='product_info2'>";
-                        echo "            <h4>€{$row['price']}";
+                        echo "            <h4>€{$row['price']}.00</h4>";
                         echo "            <a href='' class='trash_logo'><i class='fas fa-trash-alt'></i></a>";
                         echo "        </div>";
                         echo "    </div>";
@@ -96,7 +87,9 @@
                     }
 
                 } else {
-                    echo "<p>Your cart is empty</p>";
+                    echo "<div class='empty_cart'>";
+                    echo "  <p>Your cart is empty</p>";
+                    echo "</div>";
                 }
             }
         }
