@@ -97,9 +97,11 @@ window.addEventListener('load', function () {
             })
             this.classList.toggle('active');
             selectedSize = this.id;
+            selectedSizeInput.value = selectedSize;
         });
     });
 });
+
 
 
 /* ---------- SlideShow ---------- */

@@ -52,27 +52,55 @@
 
     <!-- ---------------- Cart Section ---------------- -->
 
+    
+
+    
+
+        
+
+    
     <div class="cart_">
         
 
         <div class="cart_section">
 
-            <div class="cart_product">
-                <div class="product_image">
-                    <img src="../images/products/hoodie_black_front.png" alt="">
-                </div>
-                <div class="product_info">
-                    <div class="product_info1">
-                        <h3>Basic Black Driftwear Hoodie</h3>
-                        <h4>Size: M</h4>
-                        <h4>Quantity: 1</h4>
-                    </div>
-                    <div class="product_info2">
-                        <h4>$150.00</h4>
-                        <a href="" class="trash_logo"><i class="fas fa-trash-alt"></i></a>
-                    </div>
-                </div>
-            </div>
+
+        <?php
+        $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
+
+        if (isset($_SESSION["user"])) {
+            $userId = $_SESSION["user_id"];
+            $result = $mysqli->query("SELECT c.product_id, p.name, p.price, p.image_front, c.quantity FROM carts c
+                                    INNER JOIN products p ON c.product_id = p.id
+                                    WHERE c.user_id = $userId");
+            if ($result) {
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class='cart_product'>";
+                        echo "    <div class='product_image'>";
+                        echo "        <img src='{$row['image_front']}' alt=''>";
+                        echo "    </div>";
+                        echo "    <div class='product_info'>";
+                        echo "        <div class='product_info1'>";
+                        echo "            <h3>{$row['name']}</h3>";
+                        echo "            <h4>Size: M</h4>";
+                        echo "            <h4>Quantity: {$row['quantity']}</h4>";
+                        echo "        </div>";
+                        echo "        <div class='product_info2'>";
+                        echo "            <h4>€{$row['price']}";
+                        echo "            <a href='' class='trash_logo'><i class='fas fa-trash-alt'></i></a>";
+                        echo "        </div>";
+                        echo "    </div>";
+                        echo "</div>";
+                    }
+
+                } else {
+                    echo "<p>Your cart is empty</p>";
+                }
+            }
+        }
+        ?>
 
         </div>
 
@@ -93,34 +121,6 @@
         </div>
 
     </div>
-
-    
-
-
-
-    <?php
-    $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);
-
-    if (isset($_SESSION["user"])) {
-        $userId = $_SESSION["user_id"];
-        $result = $mysqli->query("SELECT c.product_id, p.name, p.price, p.image_front, c.quantity FROM carts c
-                                INNER JOIN products p ON c.product_id = p.id
-                                WHERE c.user_id = $userId");
-        if ($result) {
-            if ($result->num_rows > 0) {
-                echo "<h2>Your Cart:</h2>";
-                echo "<div class='cart'>";
-                while ($row = $result->fetch_assoc()) {
-                    echo "<li>{$row['name']} <img class='hoodie_icon' src='{$row['image_front']}' alt=''>";
-                    echo "- Price: €{$row['price']}, Quantity: {$row['quantity']}</li>";
-                }
-                echo "</div>";
-            } else {
-                echo "<p>Your cart is empty</p>";
-            }
-        }
-    }
-    ?>
 
 
     <footer>

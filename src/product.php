@@ -8,10 +8,11 @@ if (isset($_POST['add_to_cart'])) {
     if (isset($_SESSION["user"])) {
         $productId = $_POST['product_id'];
         $userId = $_SESSION["user_id"];
+        $selectedSize = $_POST['selected_size'];
         $quantity = 1;
 
-        $checkStmt = $mysqli->prepare("SELECT id, quantity FROM carts WHERE user_id = ? AND product_id = ?");
-        $checkStmt->bind_param("ii", $userId, $productId);
+        $checkStmt = $mysqli->prepare("SELECT id, quantity FROM carts WHERE user_id = ? AND product_id = ? AND product_size = ?");
+        $checkStmt->bind_param("iis", $userId, $productId, $selectedSize);
         $checkStmt->execute();
         $checkStmt->store_result();
 
@@ -27,8 +28,8 @@ if (isset($_POST['add_to_cart'])) {
             $updateStmt->close();
         }
         else {
-            $insertStmt = $mysqli->prepare("INSERT INTO carts (user_id, product_id, quantity) VALUES (?, ?, ?)");
-            $insertStmt->bind_param("iii", $userId, $productId, $quantity);
+            $insertStmt = $mysqli->prepare("INSERT INTO carts (user_id, product_id, quantity, product_size) VALUES (?, ?, ?, ?)");
+            $insertStmt->bind_param("iiis", $userId, $productId, $quantity, $selectedSize);
             $insertStmt->execute();
             $insertStmt->close();
         }
@@ -122,11 +123,28 @@ if (isset($_POST['add_to_cart'])) {
         <div class="product_info" id="productInfo">
             <div class="product_name"><p><?php echo $productData['name']; ?></p></div>
             <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
+            <div class="product_select_size"><p>Select your size</p></div>
             <div class="product_size">
                 <div class="size_button" id="size-S"><p>S</p></div>
                 <div class="size_button" id="size-M"><p>M</p></div>
                 <div class="size_button" id="size-L"><p>L</p></div>
                 <div class="size_button" id="size-XL"><p>XL</p></div>
+
+                <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const form = document.querySelector('form');
+
+                    form.addEventListener('submit', function (event) {
+                        const selectedSize = document.querySelector('.size_button.active');
+
+                        if (!selectedSize) {
+                            event.preventDefault(); // Zatrzymaj wysyłanie formularza
+                            alert('Please select size before adding to cart');
+                        }
+                    });
+                });
+                </script>
+
             </div>
             <div class="product_shipping"><p>Free shipping over €200.00</p></div>
             <div class="product_details">Info</div>
@@ -142,6 +160,7 @@ if (isset($_POST['add_to_cart'])) {
                     <input type="hidden" name="product_id" value="<?php echo $productData['id']; ?>">
                     <input type="hidden" name="product_name" value="<?php echo $productData['name']; ?>">
                     <input type="hidden" name="product_price" value="<?php echo $productData['price']; ?>">
+                    <input type="hidden" name="selected_size" id="selected_size" value="">
                     <input type="submit" name="add_to_cart" class="addCart" value="Add to Cart">
                 </form>
             </div>
