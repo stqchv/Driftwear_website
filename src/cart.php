@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" />
 </head>
 <body>
     
@@ -51,21 +52,49 @@
 
     <!-- ---------------- Cart Section ---------------- -->
 
-    <!-- <div class="cart">
-        <h2>Your Cart</h2>
+    <div class="cart_">
+        
 
-        <div class="cart_product">
-            <div class="cart_image">
-                <img src="../images/products/hoodie_black_front.png" alt="">
+        <div class="cart_section">
+
+            <div class="cart_product">
+                <div class="product_image">
+                    <img src="../images/products/hoodie_black_front.png" alt="">
+                </div>
+                <div class="product_info">
+                    <div class="product_info1">
+                        <h3>Basic Black Driftwear Hoodie</h3>
+                        <h4>Size: M</h4>
+                        <h4>Quantity: 1</h4>
+                    </div>
+                    <div class="product_info2">
+                        <h4>$150.00</h4>
+                        <a href="" class="trash_logo"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="product_info">$150.00</div>
-            <div class="product_remove"></div>
-        </div>
-
-        <div class="shop_summary">
 
         </div>
-    </div> -->
+
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <div class="summary_info">
+                <h4>Order total: $450.00</h4>
+                <h4>Shipping costs: free</h4>
+            </div>
+            <div class="summary_info2">
+                <div class="product_info1">
+                    <h4>To pay: $450.00</h4>
+                </div>
+                <div class="product_info2">
+                    <a href="" class="trash_logo"><button>Checkout</button></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
 
 
 
