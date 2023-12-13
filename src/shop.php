@@ -84,14 +84,6 @@
 
     </div>
 
-    <?php
-
-    // $products = fetchProductsFromDatabase();
-
-    // foreach ($products as $product) {
-    //     echo "<a href='product.php?id={$product['id']}'>{$product['name']}</a><br>";
-    // }
-    ?>
 
 
     <footer>
