@@ -49,9 +49,7 @@
         </div>
     </header>
 
-    <!-- ---------------- place under navbar ---------------- -->
-
-    <div class="underbar"></div>
+    <div class="underbar"></div> <!-- place under navbar -->
 
     <!-- ---------------- CONTACT ---------------- -->
 

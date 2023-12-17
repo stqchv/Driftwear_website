@@ -97,9 +97,7 @@ if (isset($_POST['add_to_cart'])) {
         </div>
     </header>
 
-    <!-- ---------------- place under navbar ---------------- -->
-
-    <div class="underbar"></div>
+    <div class="underbar"></div> <!-- place under navbar -->
 
     <?php
     $mysqli = new mysqli('localhost', 'root', '', 'driftwear_shop') or die($mysqli->connect_error);

@@ -28,13 +28,14 @@
 }
 
 .product_image {
+    text-align: center;
     display: flex;
     justify-content: center;
     max-width: 40%;
     /* border: 2px solid var(--border-color); */
 }
 
-.product_image img {
+.product_image a img {
     max-width: 50%;
     /* border: 2px solid var(--border-color); */
 }
@@ -66,6 +67,17 @@
 
 .product_info2 h4 {
     margin-bottom: 100px;
+}
+
+form .trash_logo {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: var(--header-color);
+}
+
+form .trash_logo:hover {
+    background-color: var(--bg-color);
 }
 
 .summary {

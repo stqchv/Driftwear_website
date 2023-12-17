@@ -47,8 +47,8 @@
             ?>
         </div>
     </header>
-    <!-- ---------------- place under navbar ---------------- -->
-    <div class="underbar"></div>
+    
+    <div class="underbar"></div> <!-- place under navbar -->
 
     <!-- ---------------- Cart Section ---------------- -->
 
@@ -61,22 +61,23 @@
 
         if (isset($_SESSION["user"])) {
             $userId = $_SESSION["user_id"];
-            $result = $mysqli->query("SELECT c.id as cart_id, c.product_id, p.name, p.price, p.image_front, c.quantity, c.product_size FROM carts c
+            $result = $mysqli->query("  SELECT c.id as cart_id, c.product_id, p.name, p.price, p.image_front, c.quantity, c.product_size FROM carts c
                                         INNER JOIN products p ON c.product_id = p.id
                                         WHERE c.user_id = $userId");
             $totalPrice = 0;
             if ($result) {
                 if ($result->num_rows > 0) {
-
                     while ($row = $result->fetch_assoc()) {
                         $totalPrice += $row['price'] * $row['quantity'];
                         echo "<div class='cart_product'>";
                         echo "    <div class='product_image'>";
-                        echo "        <img src='{$row['image_front']}' alt=''>";
+                        echo "        <a href='../src/product.php?id={$row['product_id']}'>";
+                        echo "            <img src='{$row['image_front']}' alt=''>";
+                        echo "        </a>";
                         echo "    </div>";
                         echo "    <div class='product_info'>";
                         echo "        <div class='product_info1'>";
-                        echo "            <h3>{$row['name']}</h3>";
+                        echo "            <h3><a href='../src/product.php?id={$row['product_id']}'>{$row['name']}</a></h3>";
                         echo "            <h4>Size: {$row['product_size']}</h4>";
                         echo "            <h4>Quantity: {$row['quantity']}</h4>";
                         echo "        </div>";
@@ -102,7 +103,7 @@
                                 if ($shippingCost == 0) {
                                     echo "<h4>Shipping cost: Free</h4>";
                                 } else {
-                                      echo "<h4>Shipping cost: €".$shippingCost."</h4>";
+                                    echo "<h4>Shipping cost: €".$shippingCost."</h4>";
                                 }
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
