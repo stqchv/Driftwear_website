@@ -99,16 +99,16 @@
                     echo "<div class='summary'>";
                     echo "    <h2>Order Summary</h2>";
                     echo "    <div class='summary_info'>";
-                    echo "        <h4>Order total: €".$totalPrice."</h4>";
+                    echo "        <h4>Order total: <span class='span_price'>€".$totalPrice.".00</span></h4>";
                                 if ($shippingCost == 0) {
                                     echo "<h4>Shipping cost: Free</h4>";
                                 } else {
-                                    echo "<h4>Shipping cost: €".$shippingCost."</h4>";
+                                    echo "<h4>Shipping cost: <span class='span_price'>€".$shippingCost.".00</span></h4>";
                                 }
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
                     echo "        <div class='product_info1'>";
-                    echo "            <h4>To pay: €".($totalPrice + $shippingCost)."</h4>";
+                    echo "            <h4>To pay: <span class='span_price'>€".($totalPrice + $shippingCost).".00</span></h4>";
                     echo "        </div>";
                     echo "        <div class='product_info2'>";
                     echo "            <a href='' class=''><button>Checkout</button></a>";
