@@ -69,6 +69,7 @@
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $totalPrice += $row['price'] * $row['quantity'];
+                        // ---------------- Cart ----------------
                         echo "<div class='cart_product'>";
                         echo "    <div class='product_image'>";
                         echo "        <a href='../src/product.php?id={$row['product_id']}'>";
@@ -96,21 +97,22 @@
                     } else {
                         $shippingCost = 20;
                     }
+                    // ---------------- Summary ----------------
                     echo "<div class='summary'>";
                     echo "    <h2>Order Summary</h2>";
                     echo "    <div class='summary_info'>";
-                    echo "        <h4>Order total: <span class='span_price'>€".$totalPrice.".00</span></h4>";
-                                if ($shippingCost == 0) {
-                                    echo "<h4>Shipping cost: Free</h4>";
-                                } else {
-                                    echo "<h4>Shipping cost: <span class='span_price'>€".$shippingCost.".00</span></h4>";
-                                }
+                    echo "        <h4><span class='span_price'>Order total:</span> €".$totalPrice.".00</h4>";
+                                  if ($shippingCost == 0) {
+                    echo "           <h4><span class='span_price'>Shipping cost:</span> Free</h4>";
+                                  } else {
+                    echo "           <h4><span class='span_price'>Shipping cost:</span> €".$shippingCost.".00</h4>";
+                                  }
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
-                    echo "        <div class='product_info1'>";
-                    echo "            <h4>To pay: <span class='span_price'>€".($totalPrice + $shippingCost).".00</span></h4>";
+                    echo "        <div class='summary_info2_'>";
+                    echo "            <h4><span class='span_price'>To pay:</span> €".($totalPrice + $shippingCost).".00</h4>";
                     echo "        </div>";
-                    echo "        <div class='product_info2'>";
+                    echo "        <div class='summary_button'>";
                     echo "            <a href='' class=''><button>Checkout</button></a>";
                     echo "        </div>";
                     echo "    </div>";

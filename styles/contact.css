@@ -1,7 +1,24 @@
-.contact_info {
-    margin: 20px;
+.contact_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1520px;
+    margin: auto;
+    margin-top: 140px;
+    /* border: 2px solid var(--border-color); */
+    z-index: 1;
 }
 
-#first_section {
-    margin-top: 200px;
+.contact_info {
+    margin: 20px;
+    min-width: 600px;
+}
+
+.contact_info h2 {
+    margin-bottom: 20px;
+}
+
+.contact_info p {
+    margin-bottom: 20px;
 }
