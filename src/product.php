@@ -46,8 +46,6 @@ if (isset($_POST['add_to_cart'])) {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,10 +123,10 @@ if (isset($_POST['add_to_cart'])) {
             <div class="product_price"><p>€<?php echo $productData['price']; ?>.00</p></p></div>
             <div class="product_select_size"><p>Select your size</p></div>
             <div class="product_size">
-                <div class="size_button" id="size-S"><p>S</p></div>
-                <div class="size_button" id="size-M"><p>M</p></div>
-                <div class="size_button" id="size-L"><p>L</p></div>
-                <div class="size_button" id="size-XL"><p>XL</p></div>
+                <div class="size_button" id="S"><p>S</p></div>
+                <div class="size_button" id="M"><p>M</p></div>
+                <div class="size_button" id="L"><p>L</p></div>
+                <div class="size_button" id="XL"><p>XL</p></div>
 
                 <script>
                 document.addEventListener('DOMContentLoaded', function () {
@@ -149,7 +147,8 @@ if (isset($_POST['add_to_cart'])) {
             <div class="product_shipping"><p>Free shipping over €200.00</p></div>
             <div class="product_details">Info</div>
             <div class="product_informations">
-            The <?php echo $productData['name']; ?> is a statement in understated elegance. The classic black canvas provides a timeless backdrop for the iconic Driftwear emblem on the chest. No frills, just the pure essence of urban cool.
+                The <?php echo $productData['name']; ?> is a statement in understated elegance. The classic canvas provides a timeless backdrop for the iconic 
+                Driftwear emblem on the chest. No frills, just the pure essence of urban cool.
             </div>
             <div class="product_details">Size Details</div>
             <div class="product_informations">Our hoodies are unisex and oversize. We recommend choosing smaller size.</div>
@@ -160,7 +159,7 @@ if (isset($_POST['add_to_cart'])) {
                     <input type="hidden" name="product_id" value="<?php echo $productData['id']; ?>">
                     <input type="hidden" name="product_name" value="<?php echo $productData['name']; ?>">
                     <input type="hidden" name="product_price" value="<?php echo $productData['price']; ?>">
-                    <input type="hidden" name="selected_size" id="selected_size" value="">
+                    <input type="hidden" name="selected_size" id="selected_size">
                     <input type="submit" name="add_to_cart" class="addCart" value="Add to Cart">
                 </form>
             </div>
@@ -190,6 +189,5 @@ if (isset($_POST['add_to_cart'])) {
     </footer>
 
     <script src="../scripts/script.js" async defender></script>
-    <script src="../scripts/cart.js" async defender></script>
 </body>
 </html>

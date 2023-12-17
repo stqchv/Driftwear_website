@@ -85,27 +85,24 @@ window.addEventListener('scroll', (e) => {
 
 /* ---------- Size selector ---------- */
 
-const selectedSizeInput = document.getElementById('selectedSizeInput');
-
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    const selectedSizeInput = document.getElementById('selected_size');
     const buttons = document.querySelectorAll('.size_button');
-  
+
     buttons.forEach(function(button) {
         button.addEventListener('click', function () {
             buttons.forEach(function(otherButton) {
                 if (otherButton !== button) {
                     otherButton.classList.remove('active');
                 }
-            })
+            });
+
             this.classList.toggle('active');
             selectedSize = this.id;
             selectedSizeInput.value = selectedSize;
-            console.log('selectedSizeInput.value:', selectedSizeInput.value);
         });
     });
 });
-
-
 
 /* ---------- SlideShow ---------- */
 
@@ -115,7 +112,7 @@ arrowIcons = document.querySelectorAll(".wrapper i");
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 const showHideIcons = () => {
     // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 }

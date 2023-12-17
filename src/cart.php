@@ -61,13 +61,15 @@
 
         if (isset($_SESSION["user"])) {
             $userId = $_SESSION["user_id"];
-            $result = $mysqli->query("SELECT c.product_id, p.name, p.price, p.image_front, c.quantity FROM carts c
-                                    INNER JOIN products p ON c.product_id = p.id
-                                    WHERE c.user_id = $userId");
+            $result = $mysqli->query("SELECT c.id as cart_id, c.product_id, p.name, p.price, p.image_front, c.quantity, c.product_size FROM carts c
+                                        INNER JOIN products p ON c.product_id = p.id
+                                        WHERE c.user_id = $userId");
+            $totalPrice = 0;
             if ($result) {
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
+                        $totalPrice += $row['price'] * $row['quantity'];
                         echo "<div class='cart_product'>";
                         echo "    <div class='product_image'>";
                         echo "        <img src='{$row['image_front']}' alt=''>";
@@ -75,17 +77,43 @@
                         echo "    <div class='product_info'>";
                         echo "        <div class='product_info1'>";
                         echo "            <h3>{$row['name']}</h3>";
-                        echo "            <h4>Size: M</h4>";
+                        echo "            <h4>Size: {$row['product_size']}</h4>";
                         echo "            <h4>Quantity: {$row['quantity']}</h4>";
                         echo "        </div>";
                         echo "        <div class='product_info2'>";
                         echo "            <h4>€{$row['price']}.00</h4>";
-                        echo "            <a href='' class='trash_logo'><i class='fas fa-trash-alt'></i></a>";
+                        echo "            <form method='POST' action='../php/remove_from_cart.php'>";
+                        echo "                <input type='hidden' name='cart_id' value='{$row['cart_id']}'>";
+                        echo "                <button type='submit' name='remove_from_cart' class='trash_logo'><i class='fas fa-trash-alt'></i></button>";
+                        echo "            </form>";
                         echo "        </div>";
                         echo "    </div>";
                         echo "</div>";
                     }
-
+                    if ($totalPrice > 200) {
+                        $shippingCost = 0;
+                    } else {
+                        $shippingCost = 20;
+                    }
+                    echo "<div class='summary'>";
+                    echo "    <h2>Order Summary</h2>";
+                    echo "    <div class='summary_info'>";
+                    echo "        <h4>Order total: €".$totalPrice."</h4>";
+                                if ($shippingCost == 0) {
+                                    echo "<h4>Shipping cost: Free</h4>";
+                                } else {
+                                      echo "<h4>Shipping cost: €".$shippingCost."</h4>";
+                                }
+                    echo "    </div>";
+                    echo "    <div class='summary_info2'>";
+                    echo "        <div class='product_info1'>";
+                    echo "            <h4>To pay: €".($totalPrice + $shippingCost)."</h4>";
+                    echo "        </div>";
+                    echo "        <div class='product_info2'>";
+                    echo "            <a href='' class=''><button>Checkout</button></a>";
+                    echo "        </div>";
+                    echo "    </div>";
+                    echo "</div>";
                 } else {
                     echo "<div class='empty_cart'>";
                     echo "  <p>Your cart is empty</p>";
@@ -96,23 +124,6 @@
         ?>
 
         </div>
-
-        <div class="summary">
-            <h2>Order Summary</h2>
-            <div class="summary_info">
-                <h4>Order total: $450.00</h4>
-                <h4>Shipping costs: free</h4>
-            </div>
-            <div class="summary_info2">
-                <div class="product_info1">
-                    <h4>To pay: $450.00</h4>
-                </div>
-                <div class="product_info2">
-                    <a href="" class="trash_logo"><button>Checkout</button></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 
