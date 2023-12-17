@@ -97,26 +97,33 @@
                     } else {
                         $shippingCost = 20;
                     }
+                    ?>
+                    <form action="#">
+                    <?php
                     // ---------------- Summary ----------------
                     echo "<div class='summary'>";
                     echo "    <h2>Order Summary</h2>";
                     echo "    <div class='summary_info'>";
-                    echo "        <h4><span class='span_price'>Order total:</span> €".$totalPrice.".00</h4>";
+                    echo "        <h4><span class='span_price'>Order:</span> €".$totalPrice.".00</h4>";
                                   if ($shippingCost == 0) {
                     echo "           <h4><span class='span_price'>Shipping cost:</span> Free</h4>";
                                   } else {
                     echo "           <h4><span class='span_price'>Shipping cost:</span> €".$shippingCost.".00</h4>";
                                   }
                     echo "    </div>";
+                    echo "    <input "
                     echo "    <div class='summary_info2'>";
                     echo "        <div class='summary_info2_'>";
-                    echo "            <h4><span class='span_price'>To pay:</span> €".($totalPrice + $shippingCost).".00</h4>";
+                    echo "            <h4><span class='span_price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
                     echo "        </div>";
                     echo "        <div class='summary_button'>";
                     echo "            <a href='' class=''><button>Checkout</button></a>";
                     echo "        </div>";
                     echo "    </div>";
                     echo "</div>";
+                    ?>
+                    </form>
+                    <?php
                 } else {
                     echo "<div class='empty_cart'>";
                     echo "  <p>Your cart is empty</p>";
