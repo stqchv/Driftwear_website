@@ -120,7 +120,7 @@ form .trash_logo:hover {
 }
 
 .summary_info2_ h4 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 800;
 }
 
@@ -133,7 +133,7 @@ form .trash_logo:hover {
 }
 
 .discount_code h4 {
-    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
 input[type=text] {
