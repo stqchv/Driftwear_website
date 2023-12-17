@@ -111,7 +111,10 @@
                     echo "           <h4><span class='span_price'>Shipping cost:</span> €".$shippingCost.".00</h4>";
                                   }
                     echo "    </div>";
-                    echo "    <input "
+                    echo "    <div class='discount_code'>";
+                    echo "        <h4><span class='span_price'>Discount code:</span></h4>";
+                    echo "        <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
+                    echo "    </div>";
                     echo "    <div class='summary_info2'>";
                     echo "        <div class='summary_info2_'>";
                     echo "            <h4><span class='span_price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
@@ -125,7 +128,7 @@
                     </form>
                     <?php
                 } else {
-                    echo "<div class='empty_cart'>";
+                    echo "<div class='summary'>";
                     echo "  <p>Your cart is empty</p>";
                     echo "</div>";
                 }
