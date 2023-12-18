@@ -1,3 +1,25 @@
+<?php
+    $dsn = 'mysql:host=localhost;dbname=driftwear_shop';
+    $username = 'root';
+    $password = '';
+
+    try {
+        $dbh = new PDO($dsn, $username, $password);
+
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $stmt = $dbh->prepare('SELECT COUNT(*) FROM discount_codes WHERE code = :code');
+        $stmt->bindParam(':code', $discountCode, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $codeResult = $stmt->fetchColumn();
+
+        
+    } catch (PDOException $e) {
+        echo 'Błąd połączenia z bazą danych: ' . $e->getMessage();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,6 +138,11 @@
                     echo "        <div class='discount_code_bracket'>";
                     echo "            <button type='button' onclick='checkDiscoundCode()' class='discount_button'>Try</button>";
                     echo "            <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
+                                      if ($codeResult > 0) {
+                                          echo 'Kod rabatowy jest poprawny!';
+                                      } else {
+                                          echo 'Błędny kod rabatowy.';
+                                      }
                     echo "        </div>";
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
@@ -141,6 +168,7 @@
 
         </div>
     </div>
+
 
 
     <footer>

@@ -170,5 +170,17 @@ carousel.addEventListener("touchend", dragStop);
 /* ---------- Checking for discount code ---------- */
 
 function checkDiscoundCode() {
-    var discountCode = document.getElementById("discount-code").value
+    var discountCode = document.getElementById("discount-code").value;
+
+    $.ajax({
+        url: '../src/cart.php',
+        method: 'POST',
+        data: { discountCode: discountCode },
+        success: function(response) {
+            document.getElementById("result").innerHTML = response;
+        },
+        error: function(error) {
+            console.error('Błąd w zapytaniu AJAX:', error);
+        }
+    });
 }
