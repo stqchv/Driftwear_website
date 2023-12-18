@@ -172,15 +172,10 @@ carousel.addEventListener("touchend", dragStop);
 function checkDiscoundCode() {
     var discountCode = document.getElementById("discount-code").value;
 
-    $.ajax({
-        url: '../src/cart.php',
-        method: 'POST',
-        data: { discountCode: discountCode },
-        success: function(response) {
-            document.getElementById("result").innerHTML = response;
-        },
-        error: function(error) {
-            console.error('Błąd w zapytaniu AJAX:', error);
-        }
-    });
+    if (discountCode === 'POLSL<3') {
+        alert('Discount code is correct!');
+    }
+    else {
+        alert('Wrong discount code');
+    }
 }

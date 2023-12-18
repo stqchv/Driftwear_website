@@ -1,24 +1,3 @@
-<?php
-    $dsn = 'mysql:host=localhost;dbname=driftwear_shop';
-    $username = 'root';
-    $password = '';
-
-    try {
-        $dbh = new PDO($dsn, $username, $password);
-
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $stmt = $dbh->prepare('SELECT COUNT(*) FROM discount_codes WHERE code = :code');
-        $stmt->bindParam(':code', $discountCode, PDO::PARAM_STR);
-        $stmt->execute();
-
-        $codeResult = $stmt->fetchColumn();
-
-        
-    } catch (PDOException $e) {
-        echo 'Błąd połączenia z bazą danych: ' . $e->getMessage();
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -128,7 +107,7 @@
                     echo "    <div class='summary_info'>";
                     echo "        <h4><span class='span_price'>Order:</span> €".$totalPrice.".00</h4>";
                                   if ($shippingCost == 0) {
-                    echo "           <h4><span class='span_price'>Shipping cost:</span> Free</h4>";
+                    echo "           <h4><span class='span_price'>Shipping cost:</span> free</h4>";
                                   } else {
                     echo "           <h4><span class='span_price'>Shipping cost:</span> €".$shippingCost.".00</h4>";
                                   }
@@ -136,13 +115,13 @@
                     echo "    <div class='discount_code'>";
                     echo "        <h4><span class='span_price'>Discount code:</span></h4>";
                     echo "        <div class='discount_code_bracket'>";
-                    echo "            <button type='button' onclick='checkDiscoundCode()' class='discount_button'>Try</button>";
                     echo "            <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
-                                      if ($codeResult > 0) {
-                                          echo 'Kod rabatowy jest poprawny!';
-                                      } else {
-                                          echo 'Błędny kod rabatowy.';
-                                      }
+                    echo "            <button type='button' onclick='checkDiscoundCode()' class='discount_button'>Save</button>";
+                                    //   if ($codeResult > 0) {
+                                    //       echo 'Kod rabatowy jest poprawny!';
+                                    //   } else {
+                                    //       echo 'Błędny kod rabatowy.';
+                                    //   }
                     echo "        </div>";
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
@@ -150,7 +129,7 @@
                     echo "            <h4><span class='span_price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
                     echo "        </div>";
                     echo "        <div class='summary_button'>";
-                    echo "            <a href='' class=''><button>Checkout</button></a>";
+                    echo "            <input type='submit' id='discount-code' name='discount-code' placeholder='Insert your code'>";
                     echo "        </div>";
                     echo "    </div>";
                     echo "</div>";
