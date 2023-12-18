@@ -171,11 +171,12 @@ carousel.addEventListener("touchend", dragStop);
 
 function checkDiscoundCode() {
     var discountCode = document.getElementById("discount-code").value;
+    var resultMessageElement = document.getElementById('result-message');
 
-    if (discountCode === 'POLSL<3') {
-        alert('Discount code is correct!');
+    if (discountCode === 'POLSL<3' || discountCode === 'W1NTER2023') {
+        resultMessageElement.innerHTML = '&#10004;';
     }
     else {
-        alert('Wrong discount code');
+        resultMessageElement.innerHTML = '&#10008;';
     }
 }

@@ -98,6 +98,7 @@
                     } else {
                         $shippingCost = 20;
                     }
+                    
                     ?>
                     <form action="../src/payment.php" method="post">
                     <?php
@@ -105,7 +106,7 @@
                     echo "<div class='summary'>";
                     echo "    <h2>Order Summary</h2>";
                     echo "    <div class='summary_info'>";
-                    echo "        <h4><span class='span_price'>Order:</span> €".$totalPrice.".00</h4>";
+                    echo "        <h4>Order:<span class='span_price'> €".$totalPrice.".00</span></h4>";
                                   if ($shippingCost == 0) {
                     echo "           <h4><span class='span_price'>Shipping cost:</span> free</h4>";
                                   } else {
@@ -117,11 +118,7 @@
                     echo "        <div class='discount_code_bracket'>";
                     echo "            <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
                     echo "            <button type='button' onclick='checkDiscoundCode()' class='discount_button'>Save</button>";
-                                    //   if ($codeResult > 0) {
-                                    //       echo 'Kod rabatowy jest poprawny!';
-                                    //   } else {
-                                    //       echo 'Błędny kod rabatowy.';
-                                    //   }
+                    echo "            <p id='result-message'></p>";
                     echo "        </div>";
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
