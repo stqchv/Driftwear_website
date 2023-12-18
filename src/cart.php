@@ -98,7 +98,7 @@
                         $shippingCost = 20;
                     }
                     ?>
-                    <form action="#">
+                    <form action="../src/payment.php" method="post">
                     <?php
                     // ---------------- Summary ----------------
                     echo "<div class='summary'>";
@@ -113,7 +113,10 @@
                     echo "    </div>";
                     echo "    <div class='discount_code'>";
                     echo "        <h4><span class='span_price'>Discount code:</span></h4>";
-                    echo "        <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
+                    echo "        <div class='discount_code_bracket'>";
+                    echo "            <button type='button' onclick='checkDiscoundCode()' class='discount_button'>Try</button>";
+                    echo "            <input type='text' id='discount-code' name='discount-code' placeholder='Insert your code'>";
+                    echo "        </div>";
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
                     echo "        <div class='summary_info2_'>";

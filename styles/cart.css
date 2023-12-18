@@ -136,6 +136,12 @@ form .trash_logo:hover {
     font-size: 1.1rem;
 }
 
+.discount_code_bracket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
@@ -150,6 +156,14 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 1px solid var(--main-color);
+}
+
+.discount_button {
+    border: none;
+    padding: 5px;
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    margin-right: 10px;
 }
 
 
