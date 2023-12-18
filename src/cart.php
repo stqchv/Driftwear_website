@@ -98,7 +98,6 @@
                     } else {
                         $shippingCost = 20;
                     }
-                    
                     ?>
                     <form action="../src/payment.php" method="post">
                     <?php
@@ -106,7 +105,7 @@
                     echo "<div class='summary'>";
                     echo "    <h2>Order Summary</h2>";
                     echo "    <div class='summary_info'>";
-                    echo "        <h4>Order:<span class='span_price'> €".$totalPrice.".00</span></h4>";
+                    echo "        <h4><span class='span_price'>Order:</span> €".$totalPrice.".00</h4>";
                                   if ($shippingCost == 0) {
                     echo "           <h4><span class='span_price'>Shipping cost:</span> free</h4>";
                                   } else {
