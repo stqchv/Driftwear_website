@@ -35,6 +35,7 @@ session_start();
         </a>
 
         <div class="nav__links">
+            
             <a href="../src/shop.php">Shop</a>
             <a href="../src/contact.php">Contact</a>
         </div>
