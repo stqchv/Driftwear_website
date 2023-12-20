@@ -70,7 +70,7 @@ if (isset($_POST['add_to_cart'])) {
 
     <!-- ---------------- UPHEADER ---------------- -->
     <div class="upheader">
-        <a href="#"><p>GET EXTRA <strong>15%</strong> DISCOUNT</p></a>
+        <a href="../src/newsletter.php"><p>GET EXTRA <strong>15%</strong> DISCOUNT</p></a>
     </div>
     <!-- ---------------- HEADER ---------------- -->
     <header>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +41,6 @@
 
         <div class="profile">
             <?php
-                session_start();
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
                     echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
@@ -51,20 +55,50 @@
     <div class="underbar"></div> <!-- place under navbar -->
 
     <!-- ---------------- NEWSLETTER ---------------- -->
+
+    <div class="bg_fade_blue"></div>
+    <div class="bg_fade_pink"></div>
     
     <form id="newsletterForm" action="" method="post">
-        <label for="email">Twój adres e-mail:</label>
-        <input type="email" id="email" name="email">
-        <button type="submit">Zapisz się</button>
-    </form>
+        <label for="email"><h3>Insert your email:</h3></label>
+        <div class="insert_box">
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="submit" class="buttonnn" name="join" value="Join">
+        </div>
+    
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email"];
-        $kodRabatowy = "POLSL<3";
-        mail($email, "Twój kod rabatowy", "Dziękujemy za zapisanie się do newslettera. Twój kod rabatowy to: $kodRabatowy");
+    
+        $conn = new mysqli('localhost','root','','driftwear_shop');
+        if ($conn->connect_error) {
+            die("Error: " . $conn->connect_error);
+        }
+
+        $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
+        $result = $conn->query($checkEmailQuery);
+    
+        if ($result->num_rows > 0) {
+            echo "You email already exists in our newsletter";
+        } else {
+            $insertQuery = "INSERT INTO newsletter (email) VALUES ('$email')";
+            if ($conn->query($insertQuery) === TRUE) {
+                echo "<div class='code_info'>Thank you, your email has been added to our newsletter.<br>Use code 'POLSL<3' to get 15% off</div>";
+            } else {
+                echo "<div class='code_info'>There was a problem, reload the page</div>" . $conn->error;
+            }
+        }
+        $conn->close();
     }
+    
     ?>
+
+    </form>
+
+
+        
+    
 
     </div>
     <!-- ---------------- FOOTER ---------------- -->
