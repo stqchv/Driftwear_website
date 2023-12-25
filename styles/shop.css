@@ -75,6 +75,26 @@
 
 
 
+@media (max-width: 1200px) {
+    .shop_box {
+        width: 30%;
+    }
+}
+
+@media (max-width: 950px) {
+    .shop_box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop_box {
+        width: 60%;
+    }
+}
+
+
+
 
 
 
