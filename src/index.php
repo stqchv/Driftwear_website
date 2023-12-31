@@ -82,7 +82,7 @@
             <div class="section2_left">
                 <img class="hoodie_2 reveal" src="../images/hoodie_2.png" alt="">
             </div>
-            <div class="section2_right">
+            <div class="section2_right reveal">
                 <h3>Who We Are</h3>
                 <h4><br>
                     Embrace comfort in style with our signature line of hoodies, where quality meets creativity. 
@@ -98,7 +98,7 @@
         <!-- ---------------- SECTION 3 ---------------- -->
         <div class="section3">
             <div class="section3_container">
-                <div class="section3_left">
+                <div class="section3_left reveal">
                     <h3>Discover Our Collection</h3>
                     <h4><br>
                     Elevate your love for automotive with our unique collections. Whether you prefer the classic look of '70s cars or 
@@ -130,7 +130,7 @@
                     </div>
                     <i id="right" class="fa-solid fa-angle-right"></i>
                 </div>
-                <div class="section4_left">
+                <div class="section4_left reveal">
                     <h3>Quality Fabrics</h3>
                     <h4><br>
                     At DriftWear, we understand that the right material is the foundation of exceptional apparel. That's why we take pride in sourcing and using 

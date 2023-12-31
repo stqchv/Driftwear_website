@@ -56,43 +56,42 @@
     <div class="contact_section">
 
         <div class="contact_info" id="first_section">
-            <h2>Dane kontaktowe:</h2>
-            <p><strong>Adres sklepu:</strong><br>
+            <h2>Contact Information:</h2>
+            <p><strong>Store Address:</strong><br>
                 Driftwear<br>
                 ul. Wolności 123<br>
                 41-800 Zabrze
             </p>
-            <p><strong>Telefon:</strong><br>
+            <p><strong>Phone:</strong><br>
                 +48 123 456 789
             </p>
-            <p><strong>E-mail:</strong><br>
+            <p><strong>Email:</strong><br>
                 <a href="mailto:kontakt@sklepbluzowy.pl">kontakt@sklepbluzowy.pl</a>
             </p>
         </div>
 
         <div class="contact_info">
-            <h2>Godziny otwarcia:</h2>
-            <p><strong>Poniedziałek - Piątek:</strong> 9:00 - 18:00</p>
-            <p><strong>Sobota:</strong> 10:00 - 15:00</p>
-            <p><strong>Niedziela:</strong> Zamknięte</p>
+            <h2>Opening Hours:</h2>
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+            <p><strong>Saturday:</strong> 10:00 AM - 3:00 PM</p>
+            <p><strong>Sunday:</strong> Closed</p>
         </div>
 
         <div class="contact_info">
-            <h2>Formularz kontaktowy:</h2>
-            <!-- Tutaj dodaj formularz kontaktowy -->
+            <h2>Contact Form:</h2>
         </div>
 
         <div class="contact_info">
-            <h2>Media społecznościowe:</h2>
-            <p>Dołącz do naszych społecznościowych mediów, aby być na bieżąco z nowościami, promocjami i stylowymi inspiracjami:</p>
+            <h2>Social Media:</h2>
+            <p>Join our social media to stay updated with news, promotions, and stylish inspirations:</p>
             <ul>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
             </ul>
         </div>
 
-        <p>Dziękujemy za zainteresowanie naszym sklepem z bluzami online! Jesteśmy tu dla Ciebie.</p>
+        <p>Thank you for your interest in our online hoodie store! We are here for you.</p>
 
     </div>
 

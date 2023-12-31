@@ -186,15 +186,13 @@ input[type=submit] {
     background-color: var(--main-color);
     color: var(--text-color);
     padding: 14px 18px;
-    border: 2px solid var(--main-color);
+    border: none;
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
 
 input[type=submit]:hover {
-    color: var(--bg-color);
-    background-color: var(--text-color);
-    transform: translateY(0);
+    transform: translateY(-3px);
 }
 
 
