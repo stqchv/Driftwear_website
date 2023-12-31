@@ -124,7 +124,6 @@
 
             ?>
 
-            
 
             <div class="form_group">
                 <input type="submit" name="submit" value="Register">
