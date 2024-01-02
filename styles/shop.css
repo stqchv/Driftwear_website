@@ -9,8 +9,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--bg-color);
-    /* border: 2px solid var(--border-color); */
     z-index: 1;
+    position: relative;
 }
 
 .shop_box {
@@ -62,6 +62,30 @@
     transition: all .2s ease;
 }
 
+.bg_fade_blue {
+    position: absolute;
+    top: 60vh;
+    left: 70vw;
+    width: 887px;
+    height: 887px;
+    border-radius: 50%;
+    background: var(--second-color);
+    opacity: 0.4;
+    filter: blur(97px);
+}
+
+.bg_fade_pink {
+    position: absolute;
+    top: 120vh;
+    right: 70vw;
+    width: 667px;
+    height: 667px;
+    border-radius: 50%;
+    background: var(--main-color);
+    opacity: 0.4;
+    filter: blur(97px);
+}
+
 .shop_box:hover {
     .img_front {
         opacity: 0;
@@ -92,6 +116,8 @@
         width: 60%;
     }
 }
+
+
 
 
 
