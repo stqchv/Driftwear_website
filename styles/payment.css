@@ -31,10 +31,8 @@ input[type=text] {
     background-color: var(--header-color);
     border: 1px solid var(--text-color);
     transition: all .2s ease-in-out;
-    width: 60%;
     outline: none;
 }
-
 input[type=text]:focus {
     border: 1px solid var(--second-color);
 }
@@ -51,19 +49,4 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: var(--main-color);
-}
-
-input[type=text_] {
-    padding: 12px 20px;
-    margin: 8px 0;
-    color: var(--text-color);
-    background-color: var(--header-color);
-    border: 1px solid var(--text-color);
-    transition: all .2s ease-in-out;
-    width: 100%;
-    outline: none;
-}
-
-input[type=text_]:focus {
-    border: 1px solid var(--second-color);
 }

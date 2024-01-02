@@ -147,7 +147,6 @@
     </div>
 
 
-
     <footer>
         <div class="footer_content">
             <h3>Driftwear&trade;</h3>
