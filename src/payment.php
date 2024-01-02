@@ -71,11 +71,11 @@
                 <div id="address_">
                     <div id="name">
                         <p id="title">First Name</p>
-                        <input type="text" id="input" name="first_name">
+                        <input type="text_" id="input" name="first_name">
                     </div>
                     <div id="name">
                         <p id="title">Second Name</p>
-                        <input type="text" id="input" name="second_name">
+                        <input type="text_" id="input" name="second_name">
                     </div>
                 </div>
                 <div id="address">

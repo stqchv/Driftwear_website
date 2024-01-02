@@ -16,28 +16,23 @@
 
 #left_right {
     width: 100%;
+    border: 1px solid var(--text-color);
 }
 
 #address_ {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-input {
-    outline: none;
 }
 
 input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
     color: var(--text-color);
     background-color: var(--header-color);
     border: 1px solid var(--text-color);
     transition: all .2s ease-in-out;
+    width: 60%;
+    outline: none;
 }
 
 input[type=text]:focus {
@@ -47,23 +42,28 @@ input[type=text]:focus {
 input[type=submit] {
     padding: 12px 20px;
     margin: 8px 0;
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
     color: var(--text-color);
     background-color: var(--second-color);
     border: 1px solid var(--second-color);
     transition: all .2s ease-in-out;
+    outline: none;
+}
+
+input[type=submit]:hover {
+    background-color: var(--main-color);
 }
 
 input[type=text_] {
     padding: 12px 20px;
     margin: 8px 0;
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
     color: var(--text-color);
     background-color: var(--header-color);
     border: 1px solid var(--text-color);
     transition: all .2s ease-in-out;
+    width: 100%;
+    outline: none;
+}
+
+input[type=text_]:focus {
+    border: 1px solid var(--second-color);
 }
