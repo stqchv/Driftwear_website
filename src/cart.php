@@ -124,6 +124,8 @@
                     echo "        <div class='summary_info2_'>";
                     echo "            <h4><span class='span_price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
                     echo "        </div>";
+                    $finalPrice = $totalPrice + $shippingCost;
+                    echo "        <input type='hidden' name='final_price' value=". $finalPrice .">";
                     echo "        <div class='summary_button'>";
                     echo "            <input type='submit' value='Checkout'>";
                     echo "        </div>";
