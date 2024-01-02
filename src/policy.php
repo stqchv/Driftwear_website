@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/policy.css">
     <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/section.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">

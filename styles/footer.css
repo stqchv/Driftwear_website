@@ -8,6 +8,7 @@ footer {
     padding: 40px 80px 40px 80px;
     color: var(--text-color);
     transition: all .50s ease;
+    position: relative;
 }
 
 .footer_content {

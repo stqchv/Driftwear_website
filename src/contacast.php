@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/policy.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="../styles/footer.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
@@ -49,41 +49,47 @@
     </header>
 
     <div class="underbar"></div> <!-- place under navbar -->
+    
+    <!-- ---------------- CONTACT ---------------- -->
 
-    <div class="bg_fade_blue"></div>
-    <div class="bg_fade_pink"></div>
+    <div class="contact_section">
 
-    <div class="container">
-        <h3>Contact Information:</h3>
+        <div class="contact_info" id="first_section">
+            <h2>Contact Information:</h2>
+            <p><strong>Store Address:</strong><br>
+                Driftwear<br>
+                ul. Wolności 123<br>
+                41-800 Zabrze
+            </p>
+            <p><strong>Phone:</strong><br>
+                +48 123 456 789
+            </p>
+            <p><strong>Email:</strong><br>
+                <a href="mailto:kontakt@sklepbluzowy.pl">kontakt@sklepbluzowy.pl</a>
+            </p>
+        </div>
 
-        <p>We try to respond in 24h</p>
+        <div class="contact_info">
+            <h2>Opening Hours:</h2>
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+            <p><strong>Saturday:</strong> 10:00 AM - 3:00 PM</p>
+            <p><strong>Sunday:</strong> Closed</p>
+        </div>
 
-        <h4>Store Address:</h4>
-        <p>Driftwear</p>
-        <p>ul. Wolności 123</p>
-        <p>41-800 Zabrze</p>
+        <div class="contact_info">
+            <h2>Contact Form:</h2>
+        </div>
 
-        <h4>Phone:</h4>
-        <p>+48 123 456 789</p>
+        <div class="contact_info">
+            <h2>Social Media:</h2>
+            <p>Join our social media to stay updated with news, promotions, and stylish inspirations:</p>
+            <ul>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
 
-        <h4>Email:</h4>
-        <p>stqchv@driftwear.com</p>
-        <p>pytlarz@driftwear.com</p>
-
-        <h4>Opening Hours:</h4>
-        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-        <p>Saturday: 10:00 AM - 3:00 PM</p>
-        <p>Sunday: Closed</p>
-
-        <h4>Social Media:</h4>
-        <p>Join our social media to stay updated with news, promotions, and stylish inspirations:</p>
-        <ul>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
-        </ul>
-
-        <br><br>
         <p>Thank you for your interest in our online hoodie store! We are here for you.</p>
 
     </div>

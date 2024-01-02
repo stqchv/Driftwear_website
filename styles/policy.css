@@ -1,8 +1,10 @@
 .container {
+    position: relative;
     max-width: 1520px;
     margin: 100px auto 50px auto;
     padding: 50px;
-    background-color: var(--header-color)
+    background-color: var(--header-color);
+    z-index: 1;
 }
 
 .container h3 {
@@ -20,4 +22,28 @@
     font-weight: 100;
     margin-top: 10px;
     opacity: .6;
+}
+
+.bg_fade_blue {
+    position: absolute;
+    top: 40vh;
+    left: 70vw;
+    width: 887px;
+    height: 887px;
+    border-radius: 50%;
+    background: var(--second-color);
+    opacity: 0.4;
+    filter: blur(97px);
+}
+
+.bg_fade_pink {
+    position: absolute;
+    top: -55vh;
+    right: 70vw;
+    width: 667px;
+    height: 667px;
+    border-radius: 50%;
+    background: var(--main-color);
+    opacity: 0.4;
+    filter: blur(97px);
 }
