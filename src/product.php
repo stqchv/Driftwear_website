@@ -177,8 +177,7 @@ if (isset($_POST['add_to_cart'])) {
             <div class="content">
                 <a href="../src/shop.php">Shop</a>
                 <a href="../src/contact.php">Contact</a>
-                <a href="">Website Terms</a>
-                <a href="">Privacy Policy</a>
+                <a href="../src/policy.php">Privacy Policy</a>
             </div>
             <div class="footer_bottom">
             <p>&copy; 2023 Made by <span>Tomasz Stasiński & Jakub Pytlarz</span></p>

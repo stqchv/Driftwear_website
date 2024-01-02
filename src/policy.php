@@ -1,8 +1,3 @@
-<?php
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +9,9 @@ session_start();
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/newsletter.css">
+    <link rel="stylesheet" href="../styles/policy.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/section.css">
 
     <script src="https://kit.fontawesome.com/2bd77566a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -35,13 +31,13 @@ session_start();
         </a>
 
         <div class="nav__links">
-            
             <a href="../src/shop.php">Shop</a>
             <a href="../src/contact.php">Contact</a>
         </div>
 
         <div class="profile">
             <?php
+                session_start();
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
                     echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
@@ -55,53 +51,43 @@ session_start();
 
     <div class="underbar"></div> <!-- place under navbar -->
 
-    <!-- ---------------- NEWSLETTER ---------------- -->
-
     <div class="bg_fade_blue"></div>
     <div class="bg_fade_pink"></div>
-    
-    <form id="newsletterForm" action="" method="post">
-        <label for="email"><h3>Insert your email:</h3></label>
-        <div class="insert_box">
-            <input type="text" id="email" name="email" placeholder="Email" required>
-            <input type="submit" class="buttonnn" name="join" value="Join">
-        </div>
-    
 
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST["email"];
-    
-        $conn = new mysqli('localhost','root','','driftwear_shop');
-        if ($conn->connect_error) {
-            die("Error: " . $conn->connect_error);
-        }
+    <div class="container">
+        <h3>Privacy Policy for Driftwear</h3>
 
-        $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
-        $result = $conn->query($checkEmailQuery);
-    
-        if ($result->num_rows > 0) {
-            echo "You email already exists in our newsletter";
-        } else {
-            $insertQuery = "INSERT INTO newsletter (email) VALUES ('$email')";
-            if ($conn->query($insertQuery) === TRUE) {
-                echo "<div class='code_info'>Thank you, your email has been added to our newsletter.<br>Use code 'POLSL<3' to get 15% off</div>";
-            } else {
-                echo "<div class='code_info'>There was a problem, reload the page</div>" . $conn->error;
-            }
-        }
-        $conn->close();
-    }
-    
-    ?>
+        <p>Last updated: 02.01.2024</p>
 
-    </form>
+        <h4>1. Introduction</h4>
+        <p>Welcome to Driftwear. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you visit our website.</p>
 
+        <h4>2. Information We Collect</h4>
+        <p>We collect personal information that you voluntarily provide to us, including but not limited to your name, email address, and any other information you choose to share.</p>
 
-        
-    
+        <h4>3. How We Use Your Information</h4>
+        <p>We may use the collected information for various purposes, such as providing and maintaining our website, improving our services, sending periodic emails, and responding to your comments and inquiries.</p>
+
+        <h4>4. Data Security</h4>
+        <p>We take the security of your personal information seriously and implement reasonable measures to protect it from unauthorized access, disclosure, alteration, and destruction.</p>
+
+        <h4>5. Cookies</h4>
+        <p>We may use cookies to enhance your experience on our website. You have the option to accept or decline these cookies. Please note that declining cookies may limit some features of the site.</p>
+
+        <h4>6. Third-Party Links</h4>
+        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+        <h4>7. Your Rights</h4>
+        <p>You have the right to access, correct, update, or delete your personal information. If you would like to exercise any of these rights, please contact us at [your email address].</p>
+
+        <h4>8. Changes to This Privacy Policy</h4>
+        <p>We reserve the right to update or modify this Privacy Policy at any time. Any changes will be effective immediately upon posting the updated policy on our website.</p>
+
+        <br><br>
+        <p>By using our website, you agree to the terms of this Privacy Policy.</p>
 
     </div>
+
     <!-- ---------------- FOOTER ---------------- -->
 
     <footer>

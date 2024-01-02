@@ -151,10 +151,9 @@
         <div class="footer_content">
             <h3>Driftwear&trade;</h3>
             <div class="content">
-                <a href="#">Shop</a>
-                <a href="#">Contact</a>
-                <a href="#">Website Terms</a>
-                <a href="#">Privacy Policy</a>
+                <a href="../src/shop.php">Shop</a>
+                <a href="../src/contact.php">Contact</a>
+                <a href="../src/policy.php">Privacy Policy</a>
             </div>
             <div class="footer_bottom">
                 <p>&copy; 2023 Made by <span>Tomasz Stasiński & Jakub Pytlarz</span></p>

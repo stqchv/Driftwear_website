@@ -1,0 +1,23 @@
+.container {
+    max-width: 1520px;
+    margin: 100px auto 50px auto;
+    padding: 50px;
+    background-color: var(--header-color)
+}
+
+.container h3 {
+    margin-top: 20px;
+}
+
+.container h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.container p {
+    font-size: .9rem;
+    font-weight: 100;
+    margin-top: 10px;
+    opacity: .6;
+}
