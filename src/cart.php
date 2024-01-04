@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,7 +123,7 @@
                     echo "    </div>";
                     echo "    <div class='summary_info2'>";
                     echo "        <div class='summary_info2_'>";
-                    echo "            <h4><span class='span_price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
+                    echo "            <h4><span class='span_price' id='total-price'>Total order:</span> €".($totalPrice + $shippingCost).".00</h4>";
                     echo "        </div>";
                     $finalPrice = $totalPrice + $shippingCost;
                     echo "        <input type='hidden' name='final_price' value=". $finalPrice .">";
