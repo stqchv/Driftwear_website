@@ -325,62 +325,103 @@
 
 /* ------------- RESPONSIVE WINDOW ---------------- */
 
-@media (min-width: 768px) {
+@media (min-width: 460px) {
     .section1 {
-        border: 2px solid green;
+        flex-direction: column;
+    }
+    .section2 {
+        flex-direction: column;
+    }
+    .section1 img {
+        width: 380px;
     }
     .section1_left {
         font-size: 0.8rem;
     }
+    .section1_buttons {
+        margin: 22px;
+        padding: 10px;
+    }
     .shop-now {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .find-more {
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 640px) {
+    .section1 {
+        flex-direction: column;
+    }
+    .section1 img {
+        width: 380px;
+    }
+    .section2 {
+        flex-direction: column;
+    }
+    .section1_left {
         font-size: 0.8rem;
+    }
+    .section1_buttons {
+        margin: 22px;
+        padding: 10px;
+    }
+    .shop-now {
+        font-size: 0.9rem;
+    }
+    .find-more {
+        font-size: 0.9rem;
     }
 }
 @media (min-width: 768px) {
     .section1 {
-        border: 2px solid green;
+        flex-direction: row;
+    }
+    .section2 {
+        flex-direction: row;
+    }
+    .section1 img {
+        width: 380px;
     }
     .section1_left {
         font-size: 0.8rem;
     }
+    .section1_buttons {
+        margin: 22px;
+        padding: 10px;
+    }
     .shop-now {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .find-more {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 @media (min-width: 1024px) {
-    .section1 {
-        border: 2px solid blue;
-    }
     .section1 img {
         width: 420px;
     }
     .section1_left {
         font-size: 0.9rem;
     }
+    .section1_buttons {
+        margin: 22px;
+        padding: 10px;
+    }
     .shop-now {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .find-more {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 @media (min-width: 1280px) {
-    .section1 {
-        border: 2px solid red;
-    }
     .section1 img {
         width: 520px;
     }
     .section1_buttons {
         margin: 26px;
         padding: 14px;
-        font-size: 0.9rem;
     }
     .section1_left {
         font-size: 0.9rem;
@@ -393,9 +434,6 @@
     }
 }
 @media (min-width: 1536px) {
-    .section1 {
-        border: 2px solid var(--border-color);
-    }
     .section1 img {
         width: 620px;
     }

@@ -85,7 +85,6 @@ if (isset($_POST['add_to_cart'])) {
 
         <div class="profile">
             <?php
-                
                 if (isset($_SESSION["user"]) && $_SESSION["user"] == "yes") {
                     echo "<a href='../src/logout.php' class='user'>Logout</a>";
                     echo "<a href='../src/cart.php' class='cart'><i class='ri-shopping-bag-fill'></i></a>";
