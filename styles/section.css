@@ -320,3 +320,53 @@
 .carousel img:first-child{
     margin-left: 0px;
 }
+
+
+@media (min-width: 1536px) {
+    .section1 {
+        border: 2px solid var(--border-color);
+    }
+}
+@media (min-width: 1280px) {
+    .section1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 130px;
+        width: 80%;
+        perspective: 1px;
+        /* border: 2px solid var(--border-color); */
+    }
+    
+    .section1 img {
+        width: 620px;
+        transform-style: preserve-3d;
+        animation: pop-on 1.5s forwards;
+        transition: all .2s ease-in-out;
+    }
+
+    .section1_buttons {
+        margin: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* border: 2px solid var(--border-color); */
+    }
+    
+    .shop-now {
+
+    }
+    
+    .find-more {
+        
+    }
+}
+@media (min-width: 1024px) {
+    
+}
+@media (min-width: 768px) {
+    
+}
