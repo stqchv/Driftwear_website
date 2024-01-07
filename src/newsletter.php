@@ -61,7 +61,8 @@ session_start();
     <div class="bg_fade_pink"></div>
     
     <form id="newsletterForm" action="" method="post">
-        <label for="email"><h3>Insert your email:</h3></label>
+        <h3>Join Our Newsletter</h3>
+        <h4>Insert your email:</h4>
         <div class="insert_box">
             <input type="text" id="email" name="email" placeholder="Email" required>
             <input type="submit" class="buttonnn" name="join" value="Join">
