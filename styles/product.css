@@ -128,6 +128,8 @@ input[type="submit"]:hover {
 .checkout {
     border: 2px solid var(--second-color);
     background-color: var(--background-color);
+    
 }
+
 
 
