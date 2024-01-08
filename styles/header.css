@@ -97,6 +97,11 @@ header {
     align-items: center;
 }
 
+.user:hover {
+    transition: all .4s ease;
+    color: var(--text-hover);
+}
+
 .user i {
     color: var(--text-color);
     font-size: 14px;
