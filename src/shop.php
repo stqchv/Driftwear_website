@@ -50,8 +50,6 @@
 
     <div class="underbar"></div> <!-- place under navbar -->
 
-    <div class="bg_fade_blue"></div>
-
     <!-- ---------------- SHOP CONTENT ---------------- -->
 
     <?php include('../php/connect.php') ?>
