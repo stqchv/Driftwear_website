@@ -67,7 +67,7 @@
                 <input type="text" class="register_input" name="email" placeholder="Email">
             </div>
             <div class="form_group">
-                <input type="text" class="register_input" name="password" placeholder="Password">
+                <input type="password" class="register_input" name="password" placeholder="Password">
             </div>
 
             <?php 
